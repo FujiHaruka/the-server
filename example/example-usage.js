@@ -1,7 +1,8 @@
 'use strict'
 
-import React from 'react'
-import TheServer from 'the-server'
+const React = require('react')
+const TheServer = require('the-server')
+const { createElement: c } = React
 
 {
   let server = new TheServer({
@@ -23,7 +24,11 @@ import TheServer from 'the-server'
         }
       })
     },
-    html: ({ children }) => '<html><body>{children}</body></html>'
+    html: ({ children }) => c(
+      'html',
+      {},
+      c('body', {}, children)
+    )
   })
 
   server.listen(3000)

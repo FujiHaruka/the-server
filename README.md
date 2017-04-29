@@ -74,8 +74,9 @@ Usage
 ```javascript
 'use strict'
 
-import React from 'react'
-import TheServer from 'the-server'
+const React = require('react')
+const TheServer = require('the-server')
+const { createElement: c } = React
 
 {
   let server = new TheServer({
@@ -97,7 +98,11 @@ import TheServer from 'the-server'
         }
       })
     },
-    html: ({ children }) => '<html><body>{children}</body></html>'
+    html: ({ children }) => c(
+      'html',
+      {},
+      c('body', {}, children)
+    )
   })
 
   server.listen(3000)
@@ -116,7 +121,7 @@ import TheServer from 'the-server'
 API Guide
 -----
 
-+ [the-server@1.0.2](./doc/api/api.md)
++ [the-server@1.0.3](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 

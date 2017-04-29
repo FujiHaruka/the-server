@@ -8,6 +8,8 @@ addons:
 language: node_js
 node_js:
 - '7'
+before_install:
+- npm install jsdoc -g
 install:
 - npm install
 script:

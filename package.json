@@ -34,7 +34,7 @@
     "sugo-actor": "^5.0.2",
     "sugo-hub": "^6.0.7",
     "sugo-module-scoped": "^1.0.4",
-    "the-component-util": "^1.0.1",
+    "the-component-util": "^1.1.0",
     "the-router": "^1.0.4",
     "the-style": "^1.1.6"
   },

@@ -1,4 +1,11 @@
 language: node_js
+services:
+  - redis-server
+addons:
+  apt:
+    packages:
+      - redis-server
+language: node_js
 node_js:
 - '7'
 install:

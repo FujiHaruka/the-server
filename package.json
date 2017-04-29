@@ -2,14 +2,13 @@
   "name": "the-server",
   "version": "1.0.0",
   "description": "HTTP server of the-framework",
-  "main": "shim",
+  "main": "lib",
   "scripts": {
     "build": "the-script-build",
-    "doc": "the-script-doc",
-    "prepare": "the-script-build && the-script-doc",
+    "prepare": "the-script-build",
     "release": "the-script-release -y",
     "share": "the-script-share",
-    "test": "the-script-test",
+    "test": "mocha",
     "update": "the-script-update",
     "watch": "the-script-build -w"
   },

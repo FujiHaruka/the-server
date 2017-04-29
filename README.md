@@ -77,50 +77,37 @@ Usage
 import React from 'react'
 import TheServer from 'the-server'
 
-const TheServerStyles = TheServer.styles({})
+{
+  let server = new TheServer({
+    /**
+     * Directory path to serve static files
+     */
+    static: 'public',
+    /**
+     * RPC modules
+     */
+    rpc: {
+      fruitShop: (app, client) => ({
+        search (query) {
+          return [ /* ... */ ]
+        },
+        buy (product, amount) {
+          let { sessionId } = client
+          /* ... */
+        }
+      })
+    },
+    html: ({ children }) => '<html><body>{children}</body></html>'
+  })
 
-class ExampleComponent extends React.PureComponent {
-  render () {
-    return (
-      <TheServer id='my-component'
-                        styles={ TheServerStyles }
-      />
-    )
-  }
+  server.listen(3000)
 }
 
-export default ExampleComponent
 
 ```
 
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
-
-<!-- Section from "doc/guides/03.Components.md.hbs" Start -->
-
-<a name="section-doc-guides-03-components-md"></a>
-
-Components
------------
-
-### TheServer
-
-HTTP server of the-framework
-
-
-### TheServerStyle
-
-Style for TheServer
-
-**Props**
-
-| Name | Type | Description | Default |
-| --- | --- | ---- | ---- |
-| `options` | object  | Style options | `{}` |
-
-
-
-<!-- Section from "doc/guides/03.Components.md.hbs" End -->
 
 
 <!-- Sections Start -->

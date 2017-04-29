@@ -4,11 +4,10 @@
  */
 'use strict'
 
-import TheServer from '../lib/TheServer'
-import sugoCaller from 'sugo-caller'
-import { ok, equal } from 'assert'
-import arequest from 'arequest'
-import aport from 'aport'
+const TheServer = require('../lib/TheServer')
+const sugoCaller = require('sugo-caller')
+const { ok, equal } = require('assert')
+const aport = require('aport')
 
 describe('the-server', () => {
   before(() => {
@@ -17,7 +16,7 @@ describe('the-server', () => {
   after(() => {
   })
 
-  it('The server', async () => {
+  it('The server', async function () {
     let port = await aport()
     let server = new TheServer({
       rpc: {

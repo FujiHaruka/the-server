@@ -118,6 +118,7 @@ API Guide
 
 + [the-server@1.0.2](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
+  + [TheServer](./doc/api/api.md#the-server-class)
 
 
 <!-- Section from "doc/guides/10.API Guide.md.hbs" End -->

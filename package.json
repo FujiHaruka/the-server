@@ -36,6 +36,7 @@
     "sugo-hub": "^6.0.7",
     "sugo-module-scoped": "^1.0.4",
     "the-component-util": "^1.0.1",
+    "the-router": "^1.0.4",
     "the-style": "^1.1.6"
   },
   "devDependencies": {

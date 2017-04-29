@@ -1,8 +1,7 @@
 'use strict'
 
 import { SugoHub } from 'sugo-hub'
-import PropTypes from 'prop-types'
-import classnames from 'classnames'
+import serversideRendering from './helpers/serversideRendering'
 import scopedActor from './helpers/scopedActor'
 
 /**
@@ -14,7 +13,6 @@ class TheServer extends SugoHub {
       storage = { redis: { host: '127.0.0.1', port: '6379', db: 1 } },
       static: staticDir,
       rpc: rpcCreators = {},
-      middlewares,
       logFile = 'var/log/the-server.log',
       keys,
       scope = {}
@@ -22,11 +20,14 @@ class TheServer extends SugoHub {
 
     let appScope = Object.freeze(Object.assign({ config }, scope))
     let rpc = scopedActor(appScope, rpcCreators)
+    console.log(SugoHub)
     super({
       storage,
       static: staticDir,
       localActors: { rpc },
-      middlewares,
+      middlewares: [
+        serversideRendering
+      ],
       logFile,
       keys
     })

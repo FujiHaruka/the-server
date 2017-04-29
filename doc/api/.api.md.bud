@@ -1,0 +1,19 @@
+'use strict'
+
+const { api } = require('the-templates')
+const { signature } = require('the-script-jsdoc')
+
+module.exports = api({
+  pkg: require('../../package.json'),
+  signature: signature(
+    require('../../jsdoc.json'),
+    {
+      classNames: [ 'TheServer' ],
+      functionNames: [ 'create' ]
+    }
+  )
+})
+
+if (!module.parent) {
+  require('coz').render(__filename)
+}

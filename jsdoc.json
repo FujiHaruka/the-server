@@ -1,0 +1,41 @@
+{
+  "classes": [
+    {
+      "name": "TheServer",
+      "description": "HTTP server for the-framework",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheServer",
+        "description": "",
+        "parameters": [],
+        "examples": []
+      }
+    }
+  ],
+  "functions": [
+    {
+      "name": "create",
+      "access": "",
+      "virtual": false,
+      "description": "Create a TheServer instance",
+      "parameters": [
+        {
+          "name": "args",
+          "type": "*",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "TheServer",
+        "description": ""
+      }
+    }
+  ]
+}

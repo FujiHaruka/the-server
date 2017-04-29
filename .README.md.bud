@@ -6,6 +6,7 @@
 
 const { readmeMdBud } = require('ape-tmpl')
 const pkg = require('./package.json')
+const { signature } = require('the-script-jsdoc')
 
 module.exports = readmeMdBud({
   pkg,
@@ -19,7 +20,14 @@ module.exports = readmeMdBud({
   overview: 'doc/overview.md',
   links: require('./doc/links'),
   vars: {
-    signature: require('./signature')
+    signature: signature(
+      require('./jsdoc.json'),
+      {
+        classNames: [ 'TheServer' ],
+        functionNames: [ 'create' ]
+      }
+    ),
+    apiPath: './doc/api/api.md'
   }
 })
 

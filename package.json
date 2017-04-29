@@ -5,17 +5,17 @@
   "main": "lib",
   "scripts": {
     "build": "the-script-build",
-    "prepare": "the-script-build",
+    "prepare": "the-script-build && the-script-jsdoc",
     "release": "the-script-release -y",
     "share": "the-script-share",
+    "doc": "the-script-jsdoc",
     "test": "mocha",
     "update": "the-script-update",
     "watch": "the-script-build -w"
   },
   "repository": "the-labo/the-server",
   "keywords": [
-    "the",
-    "react-component"
+    "the"
   ],
   "author": {
     "name": "Taka Okunishi",
@@ -41,16 +41,16 @@
   "devDependencies": {
     "aport": "^1.0.0",
     "arequest": "^2.0.7",
+    "mocha": "^3.3.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "sugo-caller": "^4.0.2",
     "the-component-demo": "^2.0.1",
     "the-script-build": "^1.3.4",
-    "the-script-doc": "^1.0.1",
+    "the-script-jsdoc": "^1.0.1",
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
-    "the-script-test": "^1.0.1",
     "the-script-update": "^1.0.0",
     "the-templates": "^1.0.5"
   },

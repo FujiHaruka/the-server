@@ -109,6 +109,19 @@ import TheServer from 'the-server'
 
 <!-- Section from "doc/guides/02.Usage.md.hbs" End -->
 
+<!-- Section from "doc/guides/10.API Guide.md.hbs" Start -->
+
+<a name="section-doc-guides-10-a-p-i-guide-md"></a>
+
+API Guide
+-----
+
++ [the-server@1.0.2](./doc/api/api.md)
+  + [create(args)](./doc/api/api.md#the-server-function-create)
+
+
+<!-- Section from "doc/guides/10.API Guide.md.hbs" End -->
+
 
 <!-- Sections Start -->
 

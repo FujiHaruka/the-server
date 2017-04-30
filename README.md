@@ -81,6 +81,10 @@ const { createElement: c } = React
 {
   let server = new TheServer({
     /**
+     * Redis config
+     */
+    redis: { host: '127.0.0.1', port: '6379', db: 1 },
+    /**
      * Directory path to serve static files
      */
     static: 'public',
@@ -121,7 +125,7 @@ const { createElement: c } = React
 API Guide
 -----
 
-+ [the-server@1.0.3](./doc/api/api.md)
++ [the-server@1.0.4](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 

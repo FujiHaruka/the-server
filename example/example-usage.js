@@ -7,6 +7,10 @@ const { createElement: c } = React
 {
   let server = new TheServer({
     /**
+     * Redis config
+     */
+    redis: { host: '127.0.0.1', port: '6379', db: 1 },
+    /**
      * Directory path to serve static files
      */
     static: 'public',

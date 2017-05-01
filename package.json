@@ -30,6 +30,7 @@
   "dependencies": {
     "classnames": "^2.2.5",
     "co": "^4.6.0",
+    "locale": "^0.1.0",
     "prop-types": "^15.5.8",
     "sugo-actor": "^5.0.2",
     "sugo-hub": "^6.0.7",

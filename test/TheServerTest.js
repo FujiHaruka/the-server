@@ -19,7 +19,7 @@ describe('the-server', () => {
   it('The server', async function () {
     let port = await aport()
     let server = new TheServer({
-      rpc: {
+      controllers: {
         fruitShop: (app, client) => ({
           buy (name, amount) {
             console.log('Buying', { name, amount })
@@ -32,9 +32,9 @@ describe('the-server', () => {
 
     {
       let caller = sugoCaller({ port })
-      let rpc = await caller.connect('rpc')
+      let controllers = await caller.connect('controllers')
 
-      let fruitShop = rpc.get('fruitShop').with({
+      let fruitShop = controllers.get('fruitShop').with({
         sessionId: 'abc'
       })
 

@@ -32,7 +32,7 @@ describe('the-server', () => {
       buy (name, amount) {
         const s = this
         const { app, client } = s
-        let { key } = client
+        let { cid } = client
         s.total += amount
         return { name, amount, total: s.total }
       }
@@ -47,10 +47,10 @@ describe('the-server', () => {
       let controllers = await caller.connect('rpc')
 
       let fruitShop01 = controllers.get('fruitShop').with({
-        key: 'client01'
+        cid: 'client01'
       })
       let fruitShop02 = controllers.get('fruitShop').with({
-        key: 'client02'
+        cid: 'client02'
       })
 
       deepEqual(

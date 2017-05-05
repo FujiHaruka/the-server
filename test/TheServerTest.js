@@ -6,7 +6,7 @@
 
 const TheServer = require('../lib/TheServer')
 const sugoCaller = require('sugo-caller')
-const { ok, equal } = require('assert')
+const { ok, equal, deepEqual } = require('assert')
 const aport = require('aport')
 
 describe('the-server', () => {
@@ -18,27 +18,55 @@ describe('the-server', () => {
 
   it('The server', async function () {
     let port = await aport()
-    let server = new TheServer({
-      controllers: {
-        fruitShop: (app, client) => ({
-          buy (name, amount) {
-            console.log('Buying', { name, amount })
-            return { name, amount }
-          }
-        })
+    let server = new TheServer({})
+
+    class FruitShopCtrl extends Object {
+      constructor ({ app, client }) {
+        super()
+        const s = this
+        s.app = app
+        s.client = client
+        s.total = 0
       }
-    })
+
+      buy (name, amount) {
+        const s = this
+        const { app, client } = s
+        let { key } = client
+        s.total += amount
+        return { name, amount, total: s.total }
+      }
+    }
+
+    server.register(FruitShopCtrl, 'fruitShop')
+
     await server.listen(port)
 
     {
       let caller = sugoCaller({ port })
-      let controllers = await caller.connect('controllers')
+      let controllers = await caller.connect('rpc')
 
-      let fruitShop = controllers.get('fruitShop').with({
-        sessionId: 'abc'
+      let fruitShop01 = controllers.get('fruitShop').with({
+        key: 'client01'
+      })
+      let fruitShop02 = controllers.get('fruitShop').with({
+        key: 'client02'
       })
 
-      await fruitShop.buy('orange', 100)
+      deepEqual(
+        await fruitShop01.buy('orange', 100),
+        { name: 'orange', amount: 100, total: 100 }
+      )
+
+      deepEqual(
+        await fruitShop02.buy('banana', 1),
+        { name: 'banana', amount: 1, total: 1 }
+      )
+
+      deepEqual(
+        await fruitShop01.buy('orange', 400),
+        { name: 'orange', amount: 400, total: 500 }
+      )
 
       await caller.disconnect()
     }

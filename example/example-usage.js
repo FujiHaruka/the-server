@@ -5,7 +5,7 @@ const TheServer = require('the-server')
 const { createElement: c } = React
 
 {
-  let server = new TheServer({
+  const server = new TheServer({
     /**
      * Redis config
      */
@@ -15,25 +15,33 @@ const { createElement: c } = React
      */
     static: 'public',
     /**
-     * RPC modules
+     * View renderer
+     * @param children
      */
-    rpc: {
-      fruitShop: (app, client) => ({
-        search (query) {
-          return [ /* ... */ ]
-        },
-        buy (product, amount) {
-          let { sessionId } = client
-          /* ... */
-        }
-      })
-    },
     html: ({ children }) => c(
       'html',
       {},
       c('body', {}, children)
     )
   })
+
+  // Define Controller Class
+  class FruitShopCtrl {
+    search (query) {
+      const { app, client } = this
+      return [ /* ... */ ]
+    }
+
+    buy (product, amount) {
+      const { app, client } = this
+      let { sessionId } = client
+      /* ... */
+    }
+  }
+
+  // Register controller with name
+  // Controller instance will be created for each client
+  server.register(FruitShopCtrl, 'fruitShop')
 
   server.listen(3000)
 }

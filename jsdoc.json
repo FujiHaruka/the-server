@@ -43,7 +43,7 @@
               "nullable": ""
             },
             {
-              "name": "as",
+              "name": "controllerName",
               "type": "string",
               "description": "Name to instantiate with",
               "default": "",

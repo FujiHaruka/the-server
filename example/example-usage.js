@@ -1,11 +1,11 @@
 'use strict'
 
 const React = require('react')
-const TheServer = require('the-server')
+const theServer = require('the-server')
 const { createElement: c } = React
 
 {
-  const server = new TheServer({
+  const server = theServer({
     /**
      * Redis config
      */

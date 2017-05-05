@@ -34,9 +34,9 @@
     "prop-types": "^15.5.8",
     "sugo-actor": "^5.0.2",
     "sugo-hub": "^6.0.7",
-    "sugo-module-base": "^1.2.6",
     "sugo-module-scoped": "^1.0.4",
     "the-component-util": "^1.4.1",
+    "the-controller-base": "^1.0.0",
     "uuid": "^3.0.1"
   },
   "devDependencies": {

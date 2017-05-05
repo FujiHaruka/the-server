@@ -20,12 +20,10 @@ describe('the-server', () => {
     let port = await aport()
     let server = new TheServer({})
 
-    class FruitShopCtrl extends Object {
+    class FruitShopCtrl extends TheServer.Ctrl {
       constructor ({ app, client }) {
-        super()
+        super({ app, client })
         const s = this
-        s.app = app
-        s.client = client
         s.total = 0
       }
 

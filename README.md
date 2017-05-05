@@ -76,6 +76,7 @@ Usage
 
 const React = require('react')
 const theServer = require('the-server')
+const { Ctrl } = theServer
 const { createElement: c } = React
 
 {
@@ -100,26 +101,27 @@ const { createElement: c } = React
   })
 
   // Define Controller Class
-  class FruitShopCtrl {
-    search (query) {
-      const { app, client } = this
-      return [ /* ... */ ]
+  class FruitShopCtrl extends Ctrl {
+    addToCart (name, amount = 1) {
+      const { session } = this
+      let { cart = {} } = session
+      cart[ name ] = (cart[ name ] || 0) + amount
+      session.cart = cart
     }
 
-    buy (product, amount) {
-      const { app, client } = this
-      let { sessionId } = client
+    buy () {
+      const { session } = this
+      let { cart = {} } = session
       /* ... */
     }
   }
 
   // Register controller with name
-  // Controller instance will be created for each client
+  // Controller instance will be created for each method call
   server.register(FruitShopCtrl, 'fruitShop')
 
   server.listen(3000)
 }
-
 
 ```
 
@@ -133,7 +135,7 @@ const { createElement: c } = React
 API Guide
 -----
 
-+ [the-server@2.0.5](./doc/api/api.md)
++ [the-server@2.0.6](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 

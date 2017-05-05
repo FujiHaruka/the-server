@@ -21,18 +21,17 @@ describe('the-server', () => {
     let server = new TheServer({})
 
     class FruitShopCtrl extends TheServer.Ctrl {
-      constructor ({ app, client }) {
-        super({ app, client })
-        const s = this
-        s.total = 0
-      }
-
       buy (name, amount) {
         const s = this
-        const { app, client } = s
-        let { cid } = client
-        s.total += amount
-        return { name, amount, total: s.total }
+        const { app, client, session } = s
+        let { total = 0 } = session
+        session.total = total + amount
+        return { name, amount, total: session.total }
+      }
+
+      clear () {
+        const s = this
+        s.session.total = 0
       }
     }
 
@@ -50,6 +49,9 @@ describe('the-server', () => {
       let fruitShop02 = controllers.get('fruitShop').with({
         cid: 'client02'
       })
+
+      await fruitShop01.clear()
+      await fruitShop02.clear()
 
       deepEqual(
         await fruitShop01.buy('orange', 100),

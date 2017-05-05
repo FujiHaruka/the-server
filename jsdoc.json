@@ -1,6 +1,20 @@
 {
   "classes": [
     {
+      "name": "SessionStore",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "SessionStore",
+        "description": "Client session store for the-server",
+        "parameters": [],
+        "examples": []
+      }
+    },
+    {
       "name": "TheServer",
       "description": "HTTP server for the-framework",
       "extends": [],
@@ -45,76 +59,6 @@
               "nullable": ""
             }
           ],
-          "examples": []
-        }
-      ]
-    },
-    {
-      "name": "TheServerClient",
-      "description": "",
-      "extends": [],
-      "access": "",
-      "virtual": false,
-      "fires": "",
-      "constructor": {
-        "name": "TheServerClient",
-        "description": "Client representation on serverside",
-        "parameters": [],
-        "examples": []
-      },
-      "functions": [
-        {
-          "name": "getController",
-          "access": "",
-          "virtual": false,
-          "description": "Get a controller instance",
-          "parameters": [
-            {
-              "name": "name",
-              "type": "string",
-              "description": "Name of controller",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": [],
-          "returns": {
-            "type": "Object",
-            "description": "Controller instance"
-          }
-        },
-        {
-          "name": "setController",
-          "access": "",
-          "virtual": false,
-          "description": "Set a controller instance",
-          "parameters": [
-            {
-              "name": "name",
-              "type": "string",
-              "description": "Name of controller",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            },
-            {
-              "name": "controller",
-              "type": "Object",
-              "description": "Controller instance",
-              "default": "",
-              "optional": "",
-              "nullable": ""
-            }
-          ],
-          "examples": []
-        },
-        {
-          "name": "keepAlive",
-          "access": "",
-          "virtual": false,
-          "description": "Keep alive",
-          "parameters": [],
           "examples": []
         }
       ]

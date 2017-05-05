@@ -1,4 +1,4 @@
-# the-server@2.0.6
+# the-server@2.0.7
 
 HTTP server of the-framework
 
@@ -6,7 +6,7 @@ HTTP server of the-framework
   + [create(args)](#the-server-function-create)
 + [`TheServer`](#the-server-classes) Class
   + [new TheServer()](#the-server-classes-the-server-constructor)
-  + [server.register(ControllerClass, as, options)](#the-server-classes-the-server-register)
+  + [server.register(ControllerClass, controllerName, options)](#the-server-classes-the-server-register)
 
 ## Functions
 
@@ -41,14 +41,14 @@ Constructor of TheServer class
 
 <a class='md-heading-link' name="the-server-classes-the-server-register" ></a>
 
-### server.register(ControllerClass, as, options)
+### server.register(ControllerClass, controllerName, options)
 
 Register a controller
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | ControllerClass | function | Controller class |
-| as | string | Name to instantiate with |
+| controllerName | string | Name to instantiate with |
 | options | Object |  |
 
 

@@ -51,7 +51,7 @@
     "the-script-release": "^1.0.6",
     "the-script-share": "^1.0.5",
     "the-script-update": "^1.0.0",
-    "the-templates": "^1.0.10"
+    "the-templates": "^1.0.11"
   },
   "peerDependencies": {
     "react": ">=15",

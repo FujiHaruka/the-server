@@ -12,7 +12,112 @@
         "description": "",
         "parameters": [],
         "examples": []
-      }
+      },
+      "functions": [
+        {
+          "name": "register",
+          "access": "",
+          "virtual": false,
+          "description": "Register a controller",
+          "parameters": [
+            {
+              "name": "ControllerClass",
+              "type": "function",
+              "description": "Controller class",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "as",
+              "type": "string",
+              "description": "Name to instantiate with",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "options",
+              "type": "Object",
+              "description": "",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        }
+      ]
+    },
+    {
+      "name": "TheServerClient",
+      "description": "",
+      "extends": [],
+      "access": "",
+      "virtual": false,
+      "fires": "",
+      "constructor": {
+        "name": "TheServerClient",
+        "description": "Client representation on serverside",
+        "parameters": [],
+        "examples": []
+      },
+      "functions": [
+        {
+          "name": "getController",
+          "access": "",
+          "virtual": false,
+          "description": "Get a controller instance",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "description": "Name of controller",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Object",
+            "description": "Controller instance"
+          }
+        },
+        {
+          "name": "setController",
+          "access": "",
+          "virtual": false,
+          "description": "Set a controller instance",
+          "parameters": [
+            {
+              "name": "name",
+              "type": "string",
+              "description": "Name of controller",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "controller",
+              "type": "Object",
+              "description": "Controller instance",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": []
+        },
+        {
+          "name": "keepAlive",
+          "access": "",
+          "virtual": false,
+          "description": "Keep alive",
+          "parameters": [],
+          "examples": []
+        }
+      ]
     }
   ],
   "functions": [
@@ -35,6 +140,35 @@
       "returns": {
         "type": "TheServer",
         "description": ""
+      }
+    },
+    {
+      "name": "rpcActor",
+      "access": "",
+      "virtual": false,
+      "description": "Define an actor for rpc",
+      "parameters": [
+        {
+          "name": "scope",
+          "type": "Object",
+          "description": "Scope variables",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        },
+        {
+          "name": "creators",
+          "type": "Object.<string, function()>",
+          "description": "Object creators",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "SugoActor",
+        "description": "- A sugo actor instance"
       }
     }
   ]

@@ -60,6 +60,85 @@
             }
           ],
           "examples": []
+        },
+        {
+          "name": "invokeControllerAction",
+          "access": "",
+          "virtual": false,
+          "description": "Invoke a controller action",
+          "parameters": [
+            {
+              "name": "cid",
+              "type": "string",
+              "description": "Client id",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "invocation",
+              "type": "Object",
+              "description": "Controller action invocation",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "options",
+              "type": "Object",
+              "description": "Optional settings",
+              "default": "{}",
+              "optional": true,
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "*",
+            "description": ""
+          }
+        },
+        {
+          "name": "defineControllerCreator",
+          "access": "",
+          "virtual": false,
+          "description": "Define a controller creators",
+          "parameters": [
+            {
+              "name": "ControllerClass",
+              "type": "function",
+              "description": "Class of controller",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "function",
+            "description": "Controller creator function"
+          }
+        },
+        {
+          "name": "appScope",
+          "access": "",
+          "virtual": false,
+          "description": "Define an app scope object",
+          "parameters": [
+            {
+              "name": "values",
+              "type": "Object",
+              "description": "Values to set",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Object",
+            "description": "Defined scope"
+          }
         }
       ]
     }

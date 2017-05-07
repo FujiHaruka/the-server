@@ -111,6 +111,14 @@
               "default": "",
               "optional": "",
               "nullable": ""
+            },
+            {
+              "name": "as",
+              "type": "string",
+              "description": "Name as",
+              "default": "",
+              "optional": "",
+              "nullable": ""
             }
           ],
           "examples": [],

@@ -1,4 +1,4 @@
-# the-server@2.0.10
+# the-server@2.0.11
 
 HTTP server of the-framework
 
@@ -7,6 +7,9 @@ HTTP server of the-framework
 + [`TheServer`](#the-server-classes) Class
   + [new TheServer()](#the-server-classes-the-server-constructor)
   + [server.register(ControllerClass, controllerName, options)](#the-server-classes-the-server-register)
+  + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
+  + [server.defineControllerCreator(ControllerClass)](#the-server-classes-the-server-defineControllerCreator)
+  + [server.appScope(values)](#the-server-classes-the-server-appScope)
 
 ## Functions
 
@@ -50,6 +53,41 @@ Register a controller
 | ControllerClass | function | Controller class |
 | controllerName | string | Name to instantiate with |
 | options | Object |  |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-invokeControllerAction" ></a>
+
+### server.invokeControllerAction(cid, invocation, options) -> `*`
+
+Invoke a controller action
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| cid | string | Client id |
+| invocation | Object | Controller action invocation |
+| options | Object | Optional settings |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-defineControllerCreator" ></a>
+
+### server.defineControllerCreator(ControllerClass) -> `function`
+
+Define a controller creators
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ControllerClass | function | Class of controller |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>
+
+### server.appScope(values) -> `Object`
+
+Define an app scope object
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| values | Object | Values to set |
 
 
 

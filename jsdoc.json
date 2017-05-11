@@ -29,10 +29,10 @@
       },
       "functions": [
         {
-          "name": "register",
+          "name": "load",
           "access": "",
           "virtual": false,
-          "description": "Register a controller",
+          "description": "Load a controller",
           "parameters": [
             {
               "name": "ControllerClass",
@@ -59,6 +59,14 @@
               "nullable": ""
             }
           ],
+          "examples": []
+        },
+        {
+          "name": "register",
+          "access": "",
+          "virtual": false,
+          "description": "",
+          "parameters": [],
           "examples": []
         },
         {

@@ -1,4 +1,4 @@
-# the-server@2.0.14
+# the-server@2.0.15
 
 HTTP server of the-framework
 
@@ -8,7 +8,7 @@ HTTP server of the-framework
   + [new TheServer()](#the-server-classes-the-server-constructor)
   + [server.register(ControllerClass, controllerName, options)](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
-  + [server.defineControllerCreator(ControllerClass)](#the-server-classes-the-server-defineControllerCreator)
+  + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
 
 ## Functions
@@ -70,13 +70,14 @@ Invoke a controller action
 
 <a class='md-heading-link' name="the-server-classes-the-server-defineControllerCreator" ></a>
 
-### server.defineControllerCreator(ControllerClass) -> `function`
+### server.defineControllerCreator(ControllerClass, as) -> `function`
 
 Define a controller creators
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | ControllerClass | function | Class of controller |
+| as | string | Name as |
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>

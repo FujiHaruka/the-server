@@ -1,4 +1,4 @@
-# the-server@2.0.15
+# the-server@2.0.16
 
 HTTP server of the-framework
 
@@ -6,7 +6,8 @@ HTTP server of the-framework
   + [create(args)](#the-server-function-create)
 + [`TheServer`](#the-server-classes) Class
   + [new TheServer()](#the-server-classes-the-server-constructor)
-  + [server.register(ControllerClass, controllerName, options)](#the-server-classes-the-server-register)
+  + [server.load(ControllerClass, controllerName, options)](#the-server-classes-the-server-load)
+  + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
@@ -42,17 +43,23 @@ Constructor of TheServer class
 
 
 
-<a class='md-heading-link' name="the-server-classes-the-server-register" ></a>
+<a class='md-heading-link' name="the-server-classes-the-server-load" ></a>
 
-### server.register(ControllerClass, controllerName, options)
+### server.load(ControllerClass, controllerName, options)
 
-Register a controller
+Load a controller
 
 | Param | Type | Description |
 | ----- | --- | -------- |
 | ControllerClass | function | Controller class |
 | controllerName | string | Name to instantiate with |
 | options | Object |  |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-register" ></a>
+
+### server.register()
+
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-invokeControllerAction" ></a>

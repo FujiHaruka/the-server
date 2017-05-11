@@ -31,12 +31,12 @@
     "classnames": "^2.2.5",
     "co": "^4.6.0",
     "locale": "^0.1.0",
-    "prop-types": "^15.5.8",
+    "prop-types": "^15.5.9",
     "sugo-actor": "^5.0.2",
     "sugo-hub": "^6.0.8",
     "sugo-module-scoped": "^1.0.4",
     "the-component-util": "^1.4.1",
-    "the-controller-base": "^1.0.4",
+    "the-controller-base": "^2.0.3",
     "uuid": "^3.0.1"
   },
   "devDependencies": {

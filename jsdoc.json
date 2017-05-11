@@ -226,15 +226,24 @@
     },
     {
       "name": "TheServer",
-      "description": "HTTP server for the-framework",
+      "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
         "name": "TheServer",
-        "description": "",
-        "parameters": [],
+        "description": "HTTP server for the-framework",
+        "parameters": [
+          {
+            "name": "config",
+            "type": "Object",
+            "description": "",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          }
+        ],
         "examples": []
       },
       "functions": [
@@ -512,15 +521,24 @@
     },
     {
       "name": "TheServer",
-      "description": "HTTP server for the-framework",
+      "description": "",
       "extends": [],
       "access": "",
       "virtual": false,
       "fires": "",
       "constructor": {
         "name": "TheServer",
-        "description": "",
-        "parameters": [],
+        "description": "HTTP server for the-framework",
+        "parameters": [
+          {
+            "name": "config",
+            "type": "Object",
+            "description": "",
+            "default": "",
+            "optional": "",
+            "nullable": ""
+          }
+        ],
         "examples": []
       },
       "functions": [

@@ -35,7 +35,7 @@ describe('the-server', () => {
       }
     }
 
-    server.register(FruitShopCtrl, 'fruitShop')
+    server.load(FruitShopCtrl, 'fruitShop')
 
     await server.listen(port)
 

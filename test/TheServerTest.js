@@ -18,7 +18,11 @@ describe('the-server', () => {
 
   it('The server', async function () {
     let port = await aport()
-    let server = new TheServer({})
+    let server = new TheServer({
+      injectors: {
+        store: () => ({ isStore: true })
+      }
+    })
 
     class FruitShopCtrl extends TheServer.Ctrl {
       buy (name, amount) {

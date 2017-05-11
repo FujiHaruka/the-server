@@ -1,4 +1,4 @@
-# the-server@2.0.16
+# the-server@2.0.17
 
 HTTP server of the-framework
 
@@ -6,6 +6,11 @@ HTTP server of the-framework
   + [create(args)](#the-server-function-create)
 + [`TheServer`](#the-server-classes) Class
   + [new TheServer()](#the-server-classes-the-server-constructor)
+  + [server.load(ControllerClass, controllerName, options)](#the-server-classes-the-server-load)
+  + [server.register()](#the-server-classes-the-server-register)
+  + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
+  + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
+  + [server.appScope(values)](#the-server-classes-the-server-appScope)
   + [server.load(ControllerClass, controllerName, options)](#the-server-classes-the-server-load)
   + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
@@ -41,6 +46,61 @@ HTTP server for the-framework
 
 Constructor of TheServer class
 
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-load" ></a>
+
+### server.load(ControllerClass, controllerName, options)
+
+Load a controller
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ControllerClass | function | Controller class |
+| controllerName | string | Name to instantiate with |
+| options | Object |  |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-register" ></a>
+
+### server.register()
+
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-invokeControllerAction" ></a>
+
+### server.invokeControllerAction(cid, invocation, options) -> `*`
+
+Invoke a controller action
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| cid | string | Client id |
+| invocation | Object | Controller action invocation |
+| options | Object | Optional settings |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-defineControllerCreator" ></a>
+
+### server.defineControllerCreator(ControllerClass, as) -> `function`
+
+Define a controller creators
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| ControllerClass | function | Class of controller |
+| as | string | Name as |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>
+
+### server.appScope(values) -> `Object`
+
+Define an app scope object
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| values | Object | Values to set |
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-load" ></a>

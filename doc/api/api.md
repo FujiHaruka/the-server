@@ -1,11 +1,11 @@
-# the-server@2.0.17
+# the-server@2.0.18
 
 HTTP server of the-framework
 
 + Functions
   + [create(args)](#the-server-function-create)
 + [`TheServer`](#the-server-classes) Class
-  + [new TheServer()](#the-server-classes-the-server-constructor)
+  + [new TheServer(config)](#the-server-classes-the-server-constructor)
   + [server.load(ControllerClass, controllerName, options)](#the-server-classes-the-server-load)
   + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
@@ -42,10 +42,13 @@ HTTP server for the-framework
 
 <a class='md-heading-link' name="the-server-classes-the-server-constructor" ></a>
 
-### new TheServer()
+### new TheServer(config)
 
 Constructor of TheServer class
 
+| Param | Type | Description |
+| ----- | --- | -------- |
+| config | Object |  |
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-load" ></a>

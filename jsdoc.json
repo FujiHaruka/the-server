@@ -58,14 +58,6 @@
               "default": "",
               "optional": "",
               "nullable": ""
-            },
-            {
-              "name": "options",
-              "type": "Object",
-              "description": "",
-              "default": "{}",
-              "optional": true,
-              "nullable": ""
             }
           ],
           "examples": []

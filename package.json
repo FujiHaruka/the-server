@@ -32,7 +32,7 @@
     "co": "^4.6.0",
     "locale": "^0.1.0",
     "prop-types": "^15.5.9",
-    "sugo-actor": "^5.0.2",
+    "sugo-actor": "^5.0.4",
     "sugo-hub": "^6.0.8",
     "sugo-module-scoped": "^1.0.4",
     "the-check": "^1.0.0",

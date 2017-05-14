@@ -8,6 +8,7 @@ const TheServer = require('../lib/TheServer')
 const sugoCaller = require('sugo-caller')
 const { ok, equal, deepEqual } = require('assert')
 const aport = require('aport')
+const { TheNotAcceptableError } = require('the-error')
 
 describe('the-server', () => {
   before(() => {
@@ -31,6 +32,11 @@ describe('the-server', () => {
         let { total = 0 } = session
         session.total = total + amount
         return { name, amount, total: session.total }
+      }
+
+      somethingWrong () {
+        let error = new TheNotAcceptableError('Something is wrong!')
+        throw error
       }
 
       clear () {
@@ -71,6 +77,11 @@ describe('the-server', () => {
         await fruitShop01.buy('orange', 400),
         { name: 'orange', amount: 400, total: 500 }
       )
+
+      {
+        let caught = await fruitShop01.somethingWrong().catch((e) => e)
+        equal(caught.name, 'NotAcceptableError')
+      }
 
       await caller.disconnect()
     }

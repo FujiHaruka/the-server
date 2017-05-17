@@ -105,7 +105,7 @@ describe('the-server', () => {
       let { body, statusCode } = await arequest(
         `http://localhost:${port}/foo/bar/3`
       )
-      equal(statusCode, 3)
+      equal(statusCode, 200)
       deepEqual(body, { rendered: true, id: '3' })
     }
 

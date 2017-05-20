@@ -180,6 +180,14 @@
       "examples": []
     },
     {
+      "name": "toLowerKeys",
+      "access": "",
+      "virtual": false,
+      "description": "",
+      "parameters": [],
+      "examples": []
+    },
+    {
       "name": "rpcActor",
       "access": "",
       "virtual": false,

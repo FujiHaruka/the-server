@@ -43,6 +43,10 @@ describe('the-server', () => {
         const s = this
         s.session.total = 0
       }
+
+      subscribe () {
+        const s = this
+      }
     }
 
     server.load(FruitShopCtrl, 'fruitShop')

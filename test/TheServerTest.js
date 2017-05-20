@@ -7,6 +7,7 @@
 const TheServer = require('../lib/TheServer')
 const sugoCaller = require('sugo-caller')
 const { ok, equal, deepEqual } = require('assert')
+const arequest = require('arequest')
 const aport = require('aport')
 const { TheNotAcceptableError } = require('the-error')
 
@@ -88,6 +89,28 @@ describe('the-server', () => {
       }
 
       await caller.disconnect()
+    }
+
+    await server.close()
+  })
+
+  it('With endpoints', async function () {
+    let port = await aport()
+    let server = new TheServer({
+      endpoints: {
+        '/foo/bar/:id': (ctx) => {
+          ctx.body = { rendered: true, id: ctx.params.id }
+        }
+      }
+    })
+    await server.listen(port)
+
+    {
+      let { body, statusCode } = await arequest(
+        `http://localhost:${port}/foo/bar/3`
+      )
+      equal(statusCode, 200)
+      deepEqual(body, { rendered: true, id: '3' })
     }
 
     await server.close()

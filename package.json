@@ -28,6 +28,8 @@
   },
   "homepage": "https://github.com/the-labo/the-server#readme",
   "dependencies": {
+    "aport": "^1.0.0",
+    "asleep": "^1.0.3",
     "classnames": "^2.2.5",
     "co": "^4.6.0",
     "locale": "^0.1.0",
@@ -41,7 +43,6 @@
     "uuid": "^3.0.1"
   },
   "devDependencies": {
-    "aport": "^1.0.0",
     "arequest": "^2.0.7",
     "mocha": "^3.4.1",
     "react": "^15.5.4",

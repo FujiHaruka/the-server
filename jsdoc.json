@@ -776,5 +776,19 @@
         }
       ]
     }
+  ],
+  "namespaces": [
+    {
+      "name": "utils",
+      "description": "",
+      "access": "",
+      "virtual": false
+    },
+    {
+      "name": "utils",
+      "description": "",
+      "access": "",
+      "virtual": false
+    }
   ]
 }

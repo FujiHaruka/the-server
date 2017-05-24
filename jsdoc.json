@@ -780,13 +780,13 @@
   "namespaces": [
     {
       "name": "utils",
-      "description": "",
+      "description": "Utility functions",
       "access": "",
       "virtual": false
     },
     {
       "name": "utils",
-      "description": "",
+      "description": "Utility functions",
       "access": "",
       "virtual": false
     }

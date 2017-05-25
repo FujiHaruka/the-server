@@ -34,6 +34,7 @@
     "co": "^4.6.0",
     "locale": "^0.1.0",
     "prop-types": "^15.5.9",
+    "stringcase": "^3.2.1",
     "sugo-actor": "^6.0.1",
     "sugo-hub": "^7.0.1",
     "sugo-module-scoped": "^1.0.4",

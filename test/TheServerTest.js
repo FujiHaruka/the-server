@@ -112,7 +112,7 @@ describe('the-server', () => {
     await server.close()
   })
 
-  it('With endpoints', async function () {
+  it('With endpoints', async () => {
     let port = await aport()
     let server = new TheServer({
       endpoints: {
@@ -129,6 +129,42 @@ describe('the-server', () => {
       )
       equal(statusCode, 200)
       deepEqual(body, { rendered: true, id: '3' })
+    }
+
+    await server.close()
+  })
+
+  it('Via http', async () => {
+    let port = await aport()
+    let server = new TheServer({})
+
+    class SomeCtrl extends TheServer.Ctrl {
+      doSomething (v1, v2) {
+        return 'Yes it is something:' + v1 + v2
+      }
+
+      doSomethingWrong () {
+        throw new Error('No!')
+      }
+    }
+
+    server.load(SomeCtrl, 'some')
+    await server.listen(port)
+
+    {
+      let { body, statusCode } = await arequest(
+        `http://localhost:${port}/rpc/some/do-something/foo/bar`
+      )
+      equal(statusCode, 200)
+      equal(body, 'Yes it is something:foobar')
+    }
+
+    {
+      let { body, statusCode } = await arequest(
+        `http://localhost:${port}/rpc/some/do-something-wrong/foo/bar`
+      )
+      equal(statusCode, 400)
+      equal(body, 'No!')
     }
 
     await server.close()

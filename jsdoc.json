@@ -164,6 +164,43 @@
       }
     },
     {
+      "name": "newClientId",
+      "access": "",
+      "virtual": false,
+      "description": "Generate new client id",
+      "parameters": [],
+      "examples": []
+    },
+    {
+      "name": "rpcViaHttp",
+      "access": "",
+      "virtual": false,
+      "description": "Define handle to invoke rpc functions via http request",
+      "parameters": [
+        {
+          "name": null,
+          "type": "TheServer",
+          "description": "Server instance",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        },
+        {
+          "name": "options",
+          "type": "Object",
+          "description": "Optional settings",
+          "default": "{}",
+          "optional": true,
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "function",
+        "description": "Koa middleware function"
+      }
+    },
+    {
       "name": "serverRendering",
       "access": "",
       "virtual": false,
@@ -189,7 +226,7 @@
       "examples": [],
       "returns": {
         "type": "function",
-        "description": ""
+        "description": "Koa middleware function"
       }
     },
     {
@@ -434,6 +471,18 @@
           }
         },
         {
+          "name": "knownControllerNames",
+          "access": "",
+          "virtual": false,
+          "description": "Get known controller names",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Array.<string>",
+            "description": "Name of controllers"
+          }
+        },
+        {
           "name": "appScope",
           "access": "",
           "virtual": false,
@@ -588,6 +637,18 @@
           "returns": {
             "type": "Object",
             "description": "- Controller instance"
+          }
+        },
+        {
+          "name": "knownControllerNames",
+          "access": "",
+          "virtual": false,
+          "description": "Get known controller names",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Array.<string>",
+            "description": "Name of controllers"
           }
         },
         {
@@ -787,6 +848,18 @@
           }
         },
         {
+          "name": "knownControllerNames",
+          "access": "",
+          "virtual": false,
+          "description": "Get known controller names",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Array.<string>",
+            "description": "Name of controllers"
+          }
+        },
+        {
           "name": "appScope",
           "access": "",
           "virtual": false,
@@ -941,6 +1014,18 @@
           "returns": {
             "type": "Object",
             "description": "- Controller instance"
+          }
+        },
+        {
+          "name": "knownControllerNames",
+          "access": "",
+          "virtual": false,
+          "description": "Get known controller names",
+          "parameters": [],
+          "examples": [],
+          "returns": {
+            "type": "Array.<string>",
+            "description": "Name of controllers"
           }
         },
         {

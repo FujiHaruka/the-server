@@ -26,6 +26,12 @@ describe('the-server', () => {
       }
     })
 
+    class SayCtrl extends TheServer.Ctrl {
+      sayHi () {
+        return 'hi'
+      }
+    }
+
     class FruitShopCtrl extends TheServer.Ctrl {
       buy (name, amount) {
         const s = this
@@ -48,9 +54,16 @@ describe('the-server', () => {
       subscribe () {
         const s = this
       }
+
+      callSayHi () {
+        const s = this
+        let say = s.useController('say')
+        return say.sayHi()
+      }
     }
 
     server.load(FruitShopCtrl, 'fruitShop')
+    server.load(SayCtrl, 'say')
 
     await server.listen(port)
 
@@ -87,6 +100,11 @@ describe('the-server', () => {
         let caught = await fruitShop01.somethingWrong().catch((e) => e)
         equal(caught.name, 'NotAcceptableError')
       }
+
+      equal(
+        await fruitShop01.callSayHi(),
+        'hi'
+      )
 
       await caller.disconnect()
     }

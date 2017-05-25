@@ -136,11 +136,16 @@ describe('the-server', () => {
 
   it('Via http', async () => {
     let port = await aport()
+    let request = arequest.create({ jar: true })
     let server = new TheServer({})
 
     class SomeCtrl extends TheServer.Ctrl {
       doSomething (v1, v2) {
-        return 'Yes it is something:' + v1 + v2
+        const s = this
+        let { count = 0 } = s.session
+        count++
+        s.session.count = count
+        return 'Yes it is something:' + v1 + v2 + count
       }
 
       doSomethingWrong () {
@@ -152,15 +157,23 @@ describe('the-server', () => {
     await server.listen(port)
 
     {
-      let { body, statusCode } = await arequest(
+      let { body, statusCode } = await request(
         `http://localhost:${port}/rpc/some/do-something/foo/bar`
       )
       equal(statusCode, 200)
-      equal(body, 'Yes it is something:foobar')
+      equal(body, 'Yes it is something:foobar1')
     }
 
     {
-      let { body, statusCode } = await arequest(
+      let { body, statusCode } = await request(
+        `http://localhost:${port}/rpc/some/do-something/foo/bar`
+      )
+      equal(statusCode, 200)
+      equal(body, 'Yes it is something:foobar2')
+    }
+
+    {
+      let { body, statusCode } = await request(
         `http://localhost:${port}/rpc/some/do-something-wrong/foo/bar`
       )
       equal(statusCode, 400)

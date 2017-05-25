@@ -1,4 +1,4 @@
-# the-server@2.1.2
+# the-server@2.2.0
 
 HTTP server of the-framework
 
@@ -10,11 +10,13 @@ HTTP server of the-framework
   + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
+  + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
   + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
+  + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
 
 ## Functions
@@ -94,6 +96,19 @@ Define a controller creators
 | as | string | Name as |
 
 
+<a class='md-heading-link' name="the-server-classes-the-server-createControllerFor" ></a>
+
+### server.createControllerFor(controllerName, app, client) -> `Object`
+
+Create an controller
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| controllerName | string |  |
+| app | Object | App scope |
+| client | Object | Client scope |
+
+
 <a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>
 
 ### server.appScope(values) -> `Object`
@@ -146,6 +161,19 @@ Define a controller creators
 | ----- | --- | -------- |
 | ControllerClass | function | Class of controller |
 | as | string | Name as |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-createControllerFor" ></a>
+
+### server.createControllerFor(controllerName, app, client) -> `Object`
+
+Create an controller
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| controllerName | string |  |
+| app | Object | App scope |
+| client | Object | Client scope |
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>

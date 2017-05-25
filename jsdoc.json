@@ -51,6 +51,27 @@
       }
     },
     {
+      "name": "useController",
+      "access": "",
+      "virtual": false,
+      "description": "Use another controller",
+      "parameters": [
+        {
+          "name": "controllerName",
+          "type": "string",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "Object",
+        "description": ""
+      }
+    },
+    {
       "name": "create",
       "access": "",
       "virtual": false,
@@ -215,6 +236,27 @@
         "type": "SugoActor",
         "description": "- A sugo actor instance"
       }
+    },
+    {
+      "name": "useController",
+      "access": "",
+      "virtual": false,
+      "description": "Use another controller",
+      "parameters": [
+        {
+          "name": "controllerName",
+          "type": "string",
+          "description": "",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "Object",
+        "description": ""
+      }
     }
   ],
   "classes": [
@@ -355,6 +397,43 @@
           }
         },
         {
+          "name": "createControllerFor",
+          "access": "",
+          "virtual": false,
+          "description": "Create an controller",
+          "parameters": [
+            {
+              "name": "controllerName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "app",
+              "type": "Object",
+              "description": "App scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "client",
+              "type": "Object",
+              "description": "Client scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Object",
+            "description": "- Controller instance"
+          }
+        },
+        {
           "name": "appScope",
           "access": "",
           "virtual": false,
@@ -472,6 +551,43 @@
           "returns": {
             "type": "function",
             "description": "Controller creator function"
+          }
+        },
+        {
+          "name": "createControllerFor",
+          "access": "",
+          "virtual": false,
+          "description": "Create an controller",
+          "parameters": [
+            {
+              "name": "controllerName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "app",
+              "type": "Object",
+              "description": "App scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "client",
+              "type": "Object",
+              "description": "Client scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Object",
+            "description": "- Controller instance"
           }
         },
         {
@@ -634,6 +750,43 @@
           }
         },
         {
+          "name": "createControllerFor",
+          "access": "",
+          "virtual": false,
+          "description": "Create an controller",
+          "parameters": [
+            {
+              "name": "controllerName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "app",
+              "type": "Object",
+              "description": "App scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "client",
+              "type": "Object",
+              "description": "Client scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Object",
+            "description": "- Controller instance"
+          }
+        },
+        {
           "name": "appScope",
           "access": "",
           "virtual": false,
@@ -754,6 +907,43 @@
           }
         },
         {
+          "name": "createControllerFor",
+          "access": "",
+          "virtual": false,
+          "description": "Create an controller",
+          "parameters": [
+            {
+              "name": "controllerName",
+              "type": "string",
+              "description": "",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "app",
+              "type": "Object",
+              "description": "App scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            },
+            {
+              "name": "client",
+              "type": "Object",
+              "description": "Client scope",
+              "default": "",
+              "optional": "",
+              "nullable": ""
+            }
+          ],
+          "examples": [],
+          "returns": {
+            "type": "Object",
+            "description": "- Controller instance"
+          }
+        },
+        {
           "name": "appScope",
           "access": "",
           "virtual": false,
@@ -775,6 +965,20 @@
           }
         }
       ]
+    }
+  ],
+  "namespaces": [
+    {
+      "name": "utils",
+      "description": "Utility functions",
+      "access": "",
+      "virtual": false
+    },
+    {
+      "name": "utils",
+      "description": "Utility functions",
+      "access": "",
+      "virtual": false
     }
   ]
 }

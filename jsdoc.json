@@ -72,6 +72,35 @@
       }
     },
     {
+      "name": "emit",
+      "access": "",
+      "virtual": false,
+      "description": "Emit event to the client",
+      "parameters": [
+        {
+          "name": "event",
+          "type": "string",
+          "description": "Event to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        },
+        {
+          "name": "data",
+          "type": "Object",
+          "description": "Data to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "Promise",
+        "description": ""
+      }
+    },
+    {
       "name": "create",
       "access": "",
       "virtual": false,
@@ -292,6 +321,35 @@
       "examples": [],
       "returns": {
         "type": "Object",
+        "description": ""
+      }
+    },
+    {
+      "name": "emit",
+      "access": "",
+      "virtual": false,
+      "description": "Emit event to the client",
+      "parameters": [
+        {
+          "name": "event",
+          "type": "string",
+          "description": "Event to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        },
+        {
+          "name": "data",
+          "type": "Object",
+          "description": "Data to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": [],
+      "returns": {
+        "type": "Promise",
         "description": ""
       }
     }

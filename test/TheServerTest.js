@@ -8,7 +8,9 @@ const TheServer = require('../lib/TheServer')
 const sugoCaller = require('sugo-caller')
 const { ok, equal, deepEqual } = require('assert')
 const arequest = require('arequest')
+const asleep = require('asleep')
 const aport = require('aport')
+const theClient = require('the-client')
 const { TheNotAcceptableError } = require('the-error')
 
 describe('the-server', () => {
@@ -178,6 +180,63 @@ describe('the-server', () => {
       )
       equal(statusCode, 400)
       equal(body, 'No!')
+    }
+
+    await server.close()
+  })
+
+  it('Use Event Emit', async function () {
+    let port = await aport()
+    let server = new TheServer({
+      injectors: {
+        store: () => ({ isStore: true })
+      }
+    })
+
+    class LifeCtrl extends TheServer.Ctrl {
+      async listenToHeartBeat (options = {}) {
+        let { interval = 10, timeout = 1000 } = options
+        const s = this
+        const { app, client, session } = s
+        let { count = 0 } = session
+        let startAt = new Date()
+        while (new Date() - startAt < Number(timeout)) {
+          count += 1
+          session.count = count
+          s.emit('heartbeat:alive', { count })
+          await asleep(interval)
+        }
+        return count + 1
+      }
+    }
+
+    server.load(LifeCtrl, 'life')
+
+    await server.listen(port)
+
+    {
+      let client01 = theClient({ cid: 'client01', port })
+      let client02 = theClient({ cid: 'client02', port })
+      let life01 = await client01.use('life')
+      let life02 = await client02.use('life')
+
+      let eventsFor01 = []
+      let eventsFor02 = []
+      life01.on('heartbeat:alive', (data) => {
+        eventsFor01.push(data)
+      })
+      life02.on('heartbeat:alive', (data) => {
+        eventsFor02.push(data)
+      })
+
+      await life01.listenToHeartBeat()
+
+      await asleep(150)
+      await client01.disconnect()
+      await client02.disconnect()
+
+      ok(eventsFor01.length > 10)
+      equal(eventsFor02.length, 0)
     }
 
     await server.close()

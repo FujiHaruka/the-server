@@ -214,11 +214,14 @@ describe('the-server', () => {
 
     await server.listen(port)
 
+    await asleep(10)
     {
       let client01 = theClient({ cid: 'client01', port })
       let client02 = theClient({ cid: 'client02', port })
       let life01 = await client01.use('life')
       let life02 = await client02.use('life')
+
+      await asleep(10)
 
       let eventsFor01 = []
       let eventsFor02 = []

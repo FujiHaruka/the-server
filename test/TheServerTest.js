@@ -197,7 +197,7 @@ describe('the-server', () => {
       async listenToHeartBeat (options = {}) {
         let { interval = 10, timeout = 1000 } = options
         const s = this
-        const { app, client, session } = s
+        const { session } = s
         let { count = 0 } = session
         let startAt = new Date()
         while (new Date() - startAt < Number(timeout)) {

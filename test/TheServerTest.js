@@ -74,10 +74,12 @@ describe('the-server', () => {
       let controllers = await caller.connect('rpc')
 
       let fruitShop01 = controllers.get('fruitShop').with({
-        cid: 'client01'
+        cid: 'client01',
+        callerKey: 'caller-01'
       })
       let fruitShop02 = controllers.get('fruitShop').with({
-        cid: 'client02'
+        cid: 'client02',
+        callerKey: 'caller-01'
       })
 
       await fruitShop01.clear()

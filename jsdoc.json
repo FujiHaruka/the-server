@@ -94,11 +94,32 @@
           "nullable": ""
         }
       ],
-      "examples": [],
-      "returns": {
-        "type": "Promise",
-        "description": ""
-      }
+      "examples": []
+    },
+    {
+      "name": "broadcast",
+      "access": "",
+      "virtual": false,
+      "description": "Broad cast to all clients",
+      "parameters": [
+        {
+          "name": "event",
+          "type": "string",
+          "description": "Event to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        },
+        {
+          "name": "data",
+          "type": "Object",
+          "description": "Data to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": []
     },
     {
       "name": "create",
@@ -347,11 +368,32 @@
           "nullable": ""
         }
       ],
-      "examples": [],
-      "returns": {
-        "type": "Promise",
-        "description": ""
-      }
+      "examples": []
+    },
+    {
+      "name": "broadcast",
+      "access": "",
+      "virtual": false,
+      "description": "Broad cast to all clients",
+      "parameters": [
+        {
+          "name": "event",
+          "type": "string",
+          "description": "Event to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        },
+        {
+          "name": "data",
+          "type": "Object",
+          "description": "Data to emit",
+          "default": "",
+          "optional": "",
+          "nullable": ""
+        }
+      ],
+      "examples": []
     }
   ],
   "classes": [

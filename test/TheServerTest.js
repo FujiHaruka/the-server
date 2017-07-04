@@ -53,14 +53,13 @@ describe('the-server', () => {
         s.session.total = 0
       }
 
-      subscribe () {
-        const s = this
-      }
-
-      callSayHi () {
+      async callSayHi () {
         const s = this
         let say = s.useController('say')
-        return say.sayHi()
+        let hi = await say.sayHi()
+        s.callbacks.onHi(hi)
+        asleep(3000)
+        return hi
       }
     }
 
@@ -206,6 +205,7 @@ describe('the-server', () => {
           count += 1
           session.count = count
           s.emit('heartbeat:alive', { count })
+          s.callbacks.onHeartBeat(count)
           await asleep(interval)
         }
         return count + 1
@@ -222,6 +222,10 @@ describe('the-server', () => {
       let client02 = theClient({ cid: 'client02', port })
       let life01 = await client01.use('life')
       let life02 = await client02.use('life')
+
+      life01.on('the:ctrl:callback', (data) => {
+        equal(data.controller, 'life')
+      })
 
       await asleep(10)
 

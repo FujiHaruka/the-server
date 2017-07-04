@@ -143,6 +143,18 @@
       }
     },
     {
+      "name": "callbacksProxy",
+      "access": "",
+      "virtual": false,
+      "description": "Create callback proxy",
+      "parameters": [],
+      "examples": [],
+      "returns": {
+        "type": "Proxy",
+        "description": ""
+      }
+    },
+    {
       "name": "ctxRegister",
       "access": "",
       "virtual": false,
@@ -203,6 +215,14 @@
           "type": "Array.<string>",
           "description": "Supported locales",
           "default": "'en'",
+          "optional": true,
+          "nullable": ""
+        },
+        {
+          "name": "options",
+          "type": "Object",
+          "description": "Optional setting",
+          "default": "{}",
           "optional": true,
           "nullable": ""
         }

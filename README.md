@@ -130,12 +130,12 @@ const { createElement: c } = React
 
 <!-- Section from "doc/guides/10.API Guide.md.hbs" Start -->
 
-<a name="section-doc-guides-10-a-p-i-guide-md"></a>
+<a name="section-doc-guides-10-ap-i-guide-md"></a>
 
 API Guide
 -----
 
-+ [the-server@2.4.0](./doc/api/api.md)
++ [the-server@2.4.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 
@@ -162,8 +162,8 @@ This software is released under the [MIT License](https://github.com/the-labo/th
 Links
 ------
 
-+ [THE Labo][t_h_e_labo_url]
++ [THE Labo][th_e_labo_url]
 
-[t_h_e_labo_url]: https://github.com/the-labo
+[th_e_labo_url]: https://github.com/the-labo
 
 <!-- Links End -->

@@ -198,7 +198,6 @@ describe('the-server', () => {
       async listenToHeartBeat (options = {}) {
         let {interval = 10, timeout = 1000} = options
         const s = this
-        equal(await s.isAlive(), true)
         const {session} = s
         let {count = 0} = session
         let startAt = new Date()

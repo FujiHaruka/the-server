@@ -1,4 +1,4 @@
-# the-server@2.7.0
+# the-server@2.7.1
 
 HTTP server of the-framework
 
@@ -7,14 +7,12 @@ HTTP server of the-framework
 + [`TheServer`](#the-server-classes) Class
   + [new TheServer(config)](#the-server-classes-the-server-constructor)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
-  + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
   + [server.knownControllerNames()](#the-server-classes-the-server-knownControllerNames)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
-  + [server.register()](#the-server-classes-the-server-register)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
@@ -65,12 +63,6 @@ Load a controller
 | ----- | --- | -------- |
 | ControllerClass | function | Controller class |
 | controllerName | string | Name to instantiate with |
-
-
-<a class='md-heading-link' name="the-server-classes-the-server-register" ></a>
-
-### server.register()
-
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-invokeControllerAction" ></a>
@@ -138,12 +130,6 @@ Load a controller
 | ----- | --- | -------- |
 | ControllerClass | function | Controller class |
 | controllerName | string | Name to instantiate with |
-
-
-<a class='md-heading-link' name="the-server-classes-the-server-register" ></a>
-
-### server.register()
-
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-invokeControllerAction" ></a>

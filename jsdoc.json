@@ -1630,16 +1630,20 @@
             "examples": []
         },
         {
-            "name": "isAlive",
+            "name": "controllerDidLoad",
             "access": "",
             "virtual": false,
-            "description": "Check if controller is alive",
+            "description": "Handler for controller load",
             "parameters": [],
-            "examples": [],
-            "returns": {
-                "type": "Promise.<boolean>",
-                "description": ""
-            }
+            "examples": []
+        },
+        {
+            "name": "controllerWillUnload",
+            "access": "",
+            "virtual": false,
+            "description": "Handler for controller unload",
+            "parameters": [],
+            "examples": []
         },
         {
             "name": "create",
@@ -1936,16 +1940,20 @@
             "examples": []
         },
         {
-            "name": "isAlive",
+            "name": "controllerDidLoad",
             "access": "",
             "virtual": false,
-            "description": "Check if controller is alive",
+            "description": "Handler for controller load",
             "parameters": [],
-            "examples": [],
-            "returns": {
-                "type": "Promise.<boolean>",
-                "description": ""
-            }
+            "examples": []
+        },
+        {
+            "name": "controllerWillUnload",
+            "access": "",
+            "virtual": false,
+            "description": "Handler for controller unload",
+            "parameters": [],
+            "examples": []
         }
     ],
     "namespaces": [

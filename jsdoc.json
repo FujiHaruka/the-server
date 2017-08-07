@@ -1,4 +1,1512 @@
 {
+    "classes": [
+        {
+            "name": "ConnectionStore",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "ConnectionStore",
+                "description": "Client connection store for the-server",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has connection",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "del",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Delete caller",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired connections",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has connection",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "del",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Delete caller",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired connections",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "SessionStore",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "SessionStore",
+                "description": "Client session store for the-server",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has session",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired sessions",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has session",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired sessions",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "TheServer",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "TheServer",
+                "description": "HTTP server for the-framework",
+                "parameters": [
+                    {
+                        "name": "config",
+                        "type": "Object",
+                        "description": "",
+                        "default": "",
+                        "optional": "",
+                        "nullable": ""
+                    }
+                ],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load a controller",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Controller class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "Name to instantiate with",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "invokeControllerAction",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invoke a controller action",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "invocation",
+                            "type": "Object",
+                            "description": "Controller action invocation",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "Object",
+                            "description": "Optional settings",
+                            "default": "{}",
+                            "optional": true,
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "defineControllerCreator",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define a controller creators",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Class of controller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "as",
+                            "type": "string",
+                            "description": "Name as",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "function",
+                        "description": "Controller creator function"
+                    }
+                },
+                {
+                    "name": "createControllerFor",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Create an controller",
+                    "parameters": [
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "app",
+                            "type": "Object",
+                            "description": "App scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "client",
+                            "type": "Object",
+                            "description": "Client scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "- Controller instance"
+                    }
+                },
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Array.<string>",
+                        "description": "Name of controllers"
+                    }
+                },
+                {
+                    "name": "appScope",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define an app scope object",
+                    "parameters": [
+                        {
+                            "name": "values",
+                            "type": "Object",
+                            "description": "Values to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "Defined scope"
+                    }
+                },
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load a controller",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Controller class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "Name to instantiate with",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "invokeControllerAction",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invoke a controller action",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "invocation",
+                            "type": "Object",
+                            "description": "Controller action invocation",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "Object",
+                            "description": "Optional settings",
+                            "default": "{}",
+                            "optional": true,
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "defineControllerCreator",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define a controller creators",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Class of controller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "as",
+                            "type": "string",
+                            "description": "Name as",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "function",
+                        "description": "Controller creator function"
+                    }
+                },
+                {
+                    "name": "createControllerFor",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Create an controller",
+                    "parameters": [
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "app",
+                            "type": "Object",
+                            "description": "App scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "client",
+                            "type": "Object",
+                            "description": "Client scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "- Controller instance"
+                    }
+                },
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Array.<string>",
+                        "description": "Name of controllers"
+                    }
+                },
+                {
+                    "name": "appScope",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define an app scope object",
+                    "parameters": [
+                        {
+                            "name": "values",
+                            "type": "Object",
+                            "description": "Values to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "Defined scope"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "ConnectionStore",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "ConnectionStore",
+                "description": "Client connection store for the-server",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has connection",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "del",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Delete caller",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired connections",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set connection data",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has connection",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "string",
+                            "description": "Key of caller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "del",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Delete caller",
+                    "parameters": [
+                        {
+                            "name": "callerKey",
+                            "type": "",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired connections",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "SessionStore",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "SessionStore",
+                "description": "Client session store for the-server",
+                "parameters": [],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has session",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired sessions",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "get",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Object>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "set",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Set session data",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "data",
+                            "type": "Object",
+                            "description": "Data to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<void>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "has",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Check if has session",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<boolean>",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "cleanup",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Cleanup expired sessions",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Promise.<Array.<string>>",
+                        "description": ""
+                    }
+                }
+            ]
+        },
+        {
+            "name": "TheServer",
+            "description": "",
+            "extends": [],
+            "access": "",
+            "virtual": false,
+            "fires": "",
+            "constructor": {
+                "name": "TheServer",
+                "description": "HTTP server for the-framework",
+                "parameters": [
+                    {
+                        "name": "config",
+                        "type": "Object",
+                        "description": "",
+                        "default": "",
+                        "optional": "",
+                        "nullable": ""
+                    }
+                ],
+                "examples": []
+            },
+            "functions": [
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load a controller",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Controller class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "Name to instantiate with",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "invokeControllerAction",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invoke a controller action",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "invocation",
+                            "type": "Object",
+                            "description": "Controller action invocation",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "Object",
+                            "description": "Optional settings",
+                            "default": "{}",
+                            "optional": true,
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "defineControllerCreator",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define a controller creators",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Class of controller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "as",
+                            "type": "string",
+                            "description": "Name as",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "function",
+                        "description": "Controller creator function"
+                    }
+                },
+                {
+                    "name": "createControllerFor",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Create an controller",
+                    "parameters": [
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "app",
+                            "type": "Object",
+                            "description": "App scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "client",
+                            "type": "Object",
+                            "description": "Client scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "- Controller instance"
+                    }
+                },
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Array.<string>",
+                        "description": "Name of controllers"
+                    }
+                },
+                {
+                    "name": "appScope",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define an app scope object",
+                    "parameters": [
+                        {
+                            "name": "values",
+                            "type": "Object",
+                            "description": "Values to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "Defined scope"
+                    }
+                },
+                {
+                    "name": "load",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load a controller",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Controller class",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "Name to instantiate with",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "invokeControllerAction",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Invoke a controller action",
+                    "parameters": [
+                        {
+                            "name": "cid",
+                            "type": "string",
+                            "description": "Client id",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "invocation",
+                            "type": "Object",
+                            "description": "Controller action invocation",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "options",
+                            "type": "Object",
+                            "description": "Optional settings",
+                            "default": "{}",
+                            "optional": true,
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
+                    "name": "defineControllerCreator",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define a controller creators",
+                    "parameters": [
+                        {
+                            "name": "ControllerClass",
+                            "type": "function",
+                            "description": "Class of controller",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "as",
+                            "type": "string",
+                            "description": "Name as",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "function",
+                        "description": "Controller creator function"
+                    }
+                },
+                {
+                    "name": "createControllerFor",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Create an controller",
+                    "parameters": [
+                        {
+                            "name": "controllerName",
+                            "type": "string",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "app",
+                            "type": "Object",
+                            "description": "App scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "client",
+                            "type": "Object",
+                            "description": "Client scope",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "- Controller instance"
+                    }
+                },
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "parameters": [],
+                    "examples": [],
+                    "returns": {
+                        "type": "Array.<string>",
+                        "description": "Name of controllers"
+                    }
+                },
+                {
+                    "name": "appScope",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Define an app scope object",
+                    "parameters": [
+                        {
+                            "name": "values",
+                            "type": "Object",
+                            "description": "Values to set",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "Object",
+                        "description": "Defined scope"
+                    }
+                }
+            ]
+        }
+    ],
     "functions": [
         {
             "name": "create",
@@ -120,6 +1628,18 @@
                 }
             ],
             "examples": []
+        },
+        {
+            "name": "isAlive",
+            "access": "",
+            "virtual": false,
+            "description": "Check if controller is alive",
+            "parameters": [],
+            "examples": [],
+            "returns": {
+                "type": "Promise.<boolean>",
+                "description": ""
+            }
         },
         {
             "name": "create",
@@ -414,1098 +1934,18 @@
                 }
             ],
             "examples": []
-        }
-    ],
-    "classes": [
-        {
-            "name": "SessionStore",
-            "description": "",
-            "extends": [],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "SessionStore",
-                "description": "Client session store for the-server",
-                "parameters": [],
-                "examples": []
-            },
-            "functions": [
-                {
-                    "name": "get",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Object>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "set",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Set session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "data",
-                            "type": "Object",
-                            "description": "Data to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<void>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "has",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Check if has session",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "cleanup",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Cleanup expired sessions",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Array.<string>>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "get",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Object>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "set",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Set session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "data",
-                            "type": "Object",
-                            "description": "Data to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<void>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "has",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Check if has session",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "cleanup",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Cleanup expired sessions",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Array.<string>>",
-                        "description": ""
-                    }
-                }
-            ]
         },
         {
-            "name": "TheServer",
-            "description": "",
-            "extends": [],
+            "name": "isAlive",
             "access": "",
             "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "TheServer",
-                "description": "HTTP server for the-framework",
-                "parameters": [
-                    {
-                        "name": "config",
-                        "type": "Object",
-                        "description": "",
-                        "default": "",
-                        "optional": "",
-                        "nullable": ""
-                    }
-                ],
-                "examples": []
-            },
-            "functions": [
-                {
-                    "name": "load",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load a controller",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Controller class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "Name to instantiate with",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "register",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "invokeControllerAction",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Invoke a controller action",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "invocation",
-                            "type": "Object",
-                            "description": "Controller action invocation",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "options",
-                            "type": "Object",
-                            "description": "Optional settings",
-                            "default": "{}",
-                            "optional": true,
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "*",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "defineControllerCreator",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define a controller creators",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Class of controller",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "as",
-                            "type": "string",
-                            "description": "Name as",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "function",
-                        "description": "Controller creator function"
-                    }
-                },
-                {
-                    "name": "createControllerFor",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Create an controller",
-                    "parameters": [
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "app",
-                            "type": "Object",
-                            "description": "App scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "client",
-                            "type": "Object",
-                            "description": "Client scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "- Controller instance"
-                    }
-                },
-                {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
-                    "name": "appScope",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define an app scope object",
-                    "parameters": [
-                        {
-                            "name": "values",
-                            "type": "Object",
-                            "description": "Values to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "Defined scope"
-                    }
-                },
-                {
-                    "name": "load",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load a controller",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Controller class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "Name to instantiate with",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "register",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "invokeControllerAction",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Invoke a controller action",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "invocation",
-                            "type": "Object",
-                            "description": "Controller action invocation",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "options",
-                            "type": "Object",
-                            "description": "Optional settings",
-                            "default": "{}",
-                            "optional": true,
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "*",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "defineControllerCreator",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define a controller creators",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Class of controller",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "as",
-                            "type": "string",
-                            "description": "Name as",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "function",
-                        "description": "Controller creator function"
-                    }
-                },
-                {
-                    "name": "createControllerFor",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Create an controller",
-                    "parameters": [
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "app",
-                            "type": "Object",
-                            "description": "App scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "client",
-                            "type": "Object",
-                            "description": "Client scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "- Controller instance"
-                    }
-                },
-                {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
-                    "name": "appScope",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define an app scope object",
-                    "parameters": [
-                        {
-                            "name": "values",
-                            "type": "Object",
-                            "description": "Values to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "Defined scope"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "SessionStore",
-            "description": "",
-            "extends": [],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "SessionStore",
-                "description": "Client session store for the-server",
-                "parameters": [],
-                "examples": []
-            },
-            "functions": [
-                {
-                    "name": "get",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Object>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "set",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Set session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "data",
-                            "type": "Object",
-                            "description": "Data to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<void>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "has",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Check if has session",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "cleanup",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Cleanup expired sessions",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Array.<string>>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "get",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Object>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "set",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Set session data",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "data",
-                            "type": "Object",
-                            "description": "Data to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<void>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "has",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Check if has session",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<boolean>",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "cleanup",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Cleanup expired sessions",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Promise.<Array.<string>>",
-                        "description": ""
-                    }
-                }
-            ]
-        },
-        {
-            "name": "TheServer",
-            "description": "",
-            "extends": [],
-            "access": "",
-            "virtual": false,
-            "fires": "",
-            "constructor": {
-                "name": "TheServer",
-                "description": "HTTP server for the-framework",
-                "parameters": [
-                    {
-                        "name": "config",
-                        "type": "Object",
-                        "description": "",
-                        "default": "",
-                        "optional": "",
-                        "nullable": ""
-                    }
-                ],
-                "examples": []
-            },
-            "functions": [
-                {
-                    "name": "load",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load a controller",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Controller class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "Name to instantiate with",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "register",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "invokeControllerAction",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Invoke a controller action",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "invocation",
-                            "type": "Object",
-                            "description": "Controller action invocation",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "options",
-                            "type": "Object",
-                            "description": "Optional settings",
-                            "default": "{}",
-                            "optional": true,
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "*",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "defineControllerCreator",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define a controller creators",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Class of controller",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "as",
-                            "type": "string",
-                            "description": "Name as",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "function",
-                        "description": "Controller creator function"
-                    }
-                },
-                {
-                    "name": "createControllerFor",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Create an controller",
-                    "parameters": [
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "app",
-                            "type": "Object",
-                            "description": "App scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "client",
-                            "type": "Object",
-                            "description": "Client scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "- Controller instance"
-                    }
-                },
-                {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
-                    "name": "appScope",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define an app scope object",
-                    "parameters": [
-                        {
-                            "name": "values",
-                            "type": "Object",
-                            "description": "Values to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "Defined scope"
-                    }
-                },
-                {
-                    "name": "load",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Load a controller",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Controller class",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "Name to instantiate with",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": []
-                },
-                {
-                    "name": "register",
-                    "access": "",
-                    "virtual": false,
-                    "description": "",
-                    "parameters": [],
-                    "examples": []
-                },
-                {
-                    "name": "invokeControllerAction",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Invoke a controller action",
-                    "parameters": [
-                        {
-                            "name": "cid",
-                            "type": "string",
-                            "description": "Client id",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "invocation",
-                            "type": "Object",
-                            "description": "Controller action invocation",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "options",
-                            "type": "Object",
-                            "description": "Optional settings",
-                            "default": "{}",
-                            "optional": true,
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "*",
-                        "description": ""
-                    }
-                },
-                {
-                    "name": "defineControllerCreator",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define a controller creators",
-                    "parameters": [
-                        {
-                            "name": "ControllerClass",
-                            "type": "function",
-                            "description": "Class of controller",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "as",
-                            "type": "string",
-                            "description": "Name as",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "function",
-                        "description": "Controller creator function"
-                    }
-                },
-                {
-                    "name": "createControllerFor",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Create an controller",
-                    "parameters": [
-                        {
-                            "name": "controllerName",
-                            "type": "string",
-                            "description": "",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "app",
-                            "type": "Object",
-                            "description": "App scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        },
-                        {
-                            "name": "client",
-                            "type": "Object",
-                            "description": "Client scope",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "- Controller instance"
-                    }
-                },
-                {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
-                    "name": "appScope",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Define an app scope object",
-                    "parameters": [
-                        {
-                            "name": "values",
-                            "type": "Object",
-                            "description": "Values to set",
-                            "default": "",
-                            "optional": "",
-                            "nullable": ""
-                        }
-                    ],
-                    "examples": [],
-                    "returns": {
-                        "type": "Object",
-                        "description": "Defined scope"
-                    }
-                }
-            ]
+            "description": "Check if controller is alive",
+            "parameters": [],
+            "examples": [],
+            "returns": {
+                "type": "Promise.<boolean>",
+                "description": ""
+            }
         }
     ],
     "namespaces": [

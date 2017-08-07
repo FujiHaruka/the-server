@@ -76,15 +76,15 @@ Usage
 
 const React = require('react')
 const theServer = require('the-server')
-const { Ctrl } = theServer
-const { createElement: c } = React
+const {Ctrl} = theServer
+const {createElement: c} = React
 
 {
   const server = theServer({
     /**
      * Redis config
      */
-    redis: { host: '127.0.0.1', port: '6379', db: 1 },
+    redis: {host: '127.0.0.1', port: '6379', db: 1},
     /**
      * Directory path to serve static files
      */
@@ -93,7 +93,7 @@ const { createElement: c } = React
      * View renderer
      * @param children
      */
-    html: ({ children }) => c(
+    html: ({children}) => c(
       'html',
       {},
       c('body', {}, children)
@@ -102,16 +102,16 @@ const { createElement: c } = React
 
   // Define Controller Class
   class FruitShopCtrl extends Ctrl {
-    addToCart (name, amount = 1) {
-      const { session } = this
-      let { cart = {} } = session
-      cart[ name ] = (cart[ name ] || 0) + amount
+    async addToCart (name, amount = 1) {
+      const {session} = this
+      let {cart = {}} = session
+      cart[name] = (cart[name] || 0) + amount
       session.cart = cart
     }
 
-    buy () {
-      const { session } = this
-      let { cart = {} } = session
+    async buy () {
+      const {session} = this
+      let {cart = {}} = session
       /* ... */
     }
   }
@@ -135,7 +135,7 @@ const { createElement: c } = React
 API Guide
 -----
 
-+ [the-server@2.6.0](./doc/api/api.md)
++ [the-server@2.7.0](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 

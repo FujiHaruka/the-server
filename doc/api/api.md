@@ -1,4 +1,4 @@
-# the-server@2.7.1
+# the-server@2.7.2
 
 HTTP server of the-framework
 

@@ -1630,22 +1630,6 @@
             "examples": []
         },
         {
-            "name": "controllerDidLoad",
-            "access": "",
-            "virtual": false,
-            "description": "Handler for controller load",
-            "parameters": [],
-            "examples": []
-        },
-        {
-            "name": "controllerWillUnload",
-            "access": "",
-            "virtual": false,
-            "description": "Handler for controller unload",
-            "parameters": [],
-            "examples": []
-        },
-        {
             "name": "create",
             "access": "",
             "virtual": false,
@@ -1937,22 +1921,6 @@
                     "nullable": ""
                 }
             ],
-            "examples": []
-        },
-        {
-            "name": "controllerDidLoad",
-            "access": "",
-            "virtual": false,
-            "description": "Handler for controller load",
-            "parameters": [],
-            "examples": []
-        },
-        {
-            "name": "controllerWillUnload",
-            "access": "",
-            "virtual": false,
-            "description": "Handler for controller unload",
-            "parameters": [],
             "examples": []
         }
     ],

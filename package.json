@@ -34,7 +34,7 @@
     "locale": "^0.1.0",
     "prop-types": "^15.5.9",
     "stringcase": "^4.0.0",
-    "sugo-actor": "file:../../realglobe-projects/sugo-actor",
+    "sugo-actor": "^6.0.2",
     "sugo-constants": "^2.4.2",
     "sugo-hub": "^7.0.2",
     "sugo-module-scoped": "^1.0.4",

@@ -69,16 +69,19 @@ describe('the-server', () => {
     await server.listen(port)
 
     {
-      let caller = sugoCaller({port})
-      let controllers = await caller.connect('rpc')
+      const caller = sugoCaller({port})
+      const controllers = await caller.connect('rpc')
 
-      let fruitShop01 = controllers.get('fruitShop').with({
+      server.createCallerConnection('caller-01')
+      server.createCallerConnection('caller-02')
+
+      const fruitShop01 = controllers.get('fruitShop').with({
         cid: 'client01',
         callerKey: 'caller-01'
       })
-      let fruitShop02 = controllers.get('fruitShop').with({
+      const fruitShop02 = controllers.get('fruitShop').with({
         cid: 'client02',
-        callerKey: 'caller-01'
+        callerKey: 'caller-02'
       })
 
       await fruitShop01.clear()
@@ -108,6 +111,9 @@ describe('the-server', () => {
         await fruitShop01.callSayHi(),
         'hi'
       )
+
+      server.destroyCallerConnection('caller-01')
+      server.destroyCallerConnection('caller-02')
 
       await caller.disconnect()
     }

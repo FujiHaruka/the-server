@@ -21,8 +21,8 @@ describe('the-server', () => {
   })
 
   it('The server', async function () {
-    let port = await aport()
-    let server = new TheServer({
+    const port = await aport()
+    const server = new TheServer({
       injectors: {
         store: () => ({isStore: true})
       }
@@ -31,6 +31,14 @@ describe('the-server', () => {
     class SayCtrl extends TheServer.Ctrl {
       sayHi () {
         return 'hi'
+      }
+
+      controllerDidAttach () {
+        console.log('Say did attach')
+      }
+
+      controllerWillDetach () {
+        console.log('Say will detach')
       }
     }
 

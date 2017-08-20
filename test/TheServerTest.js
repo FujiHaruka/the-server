@@ -12,6 +12,7 @@ const asleep = require('asleep')
 const aport = require('aport')
 const theClient = require('the-client')
 const {TheNotAcceptableError} = require('the-error')
+const React = require('react')
 
 describe('the-server', () => {
   before(() => {
@@ -129,16 +130,51 @@ describe('the-server', () => {
     await server.close()
   })
 
-  it('With endpoints', async () => {
+  it('With endpoints adn html', async () => {
     let port = await aport()
     let server = new TheServer({
       endpoints: {
         '/foo/bar/:id': (ctx) => {
           ctx.body = {rendered: true, id: ctx.params.id}
         }
-      }
+      },
+      html: ({}) => React.createElement('html', {id: 'hoge'}),
+      cacheDIr: `${__dirname}/../tmp/testing-cache`
     })
     await server.listen(port)
+
+    {
+      const times = []
+      {
+        const startAt = new Date()
+        let {body, statusCode} = await arequest(
+          `http://localhost:${port}/a?hoge`
+        )
+        equal(statusCode, 200)
+        equal(body, '<html id="hoge"></html>')
+        times.push(new Date() - startAt)
+      }
+
+      {
+        const startAt = new Date()
+        let {body, statusCode} = await arequest(
+          `http://localhost:${port}/a?hoge`
+        )
+        equal(statusCode, 200)
+        equal(body, '<html id="hoge"></html>')
+        times.push(new Date() - startAt)
+      }
+
+      {
+        const startAt = new Date()
+        let {body, statusCode} = await arequest(
+          `http://localhost:${port}/a?hoge`
+        )
+        equal(statusCode, 200)
+        equal(body, '<html id="hoge"></html>')
+        times.push(new Date() - startAt)
+      }
+    }
 
     {
       let {body, statusCode} = await arequest(

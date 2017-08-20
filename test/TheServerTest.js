@@ -174,6 +174,8 @@ describe('the-server', () => {
         equal(body, '<html id="hoge"></html>')
         times.push(new Date() - startAt)
       }
+
+      console.log('html times:', times)
     }
 
     {

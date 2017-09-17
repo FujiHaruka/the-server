@@ -37,7 +37,7 @@
     "prop-types": "^15.5.9",
     "rimraf": "^2.6.2",
     "stringcase": "^4.0.0",
-    "sugo-actor": "^7.0.4",
+    "sugo-actor": "^7.0.6",
     "sugo-constants": "^2.4.2",
     "sugo-hub": "^8.0.2",
     "sugo-module-scoped": "^1.0.5",

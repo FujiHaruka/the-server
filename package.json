@@ -42,7 +42,7 @@
     "sugo-hub": "^8.0.3",
     "sugo-module-scoped": "^1.0.5",
     "the-check": "^1.2.0",
-    "the-component-util": "^1.4.2",
+    "the-component-util": "^1.5.1",
     "the-controller-base": "^3.0.1",
     "uuid": "^3.1.0"
   },

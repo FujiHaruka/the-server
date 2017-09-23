@@ -30,14 +30,14 @@ const {createElement: c} = React
   class FruitShopCtrl extends Ctrl {
     async addToCart (name, amount = 1) {
       const {session} = this
-      let {cart = {}} = session
+      const {cart = {}} = session
       cart[name] = (cart[name] || 0) + amount
       session.cart = cart
     }
 
     async buy () {
       const {session} = this
-      let {cart = {}} = session
+      const {cart = {}} = session
       /* ... */
     }
   }

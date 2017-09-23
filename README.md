@@ -104,14 +104,14 @@ const {createElement: c} = React
   class FruitShopCtrl extends Ctrl {
     async addToCart (name, amount = 1) {
       const {session} = this
-      let {cart = {}} = session
+      const {cart = {}} = session
       cart[name] = (cart[name] || 0) + amount
       session.cart = cart
     }
 
     async buy () {
       const {session} = this
-      let {cart = {}} = session
+      const {cart = {}} = session
       /* ... */
     }
   }
@@ -135,7 +135,7 @@ const {createElement: c} = React
 API Guide
 -----
 
-+ [the-server@4.0.8](./doc/api/api.md)
++ [the-server@4.0.9](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 

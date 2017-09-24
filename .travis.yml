@@ -1,13 +1,8 @@
 language: node_js
 services:
   - redis-server
-addons:
-  apt:
-    packages:
-      - redis-server
-language: node_js
 node_js:
-- '7'
+- '8'
 before_install:
 - npm install jsdoc -g
 install:

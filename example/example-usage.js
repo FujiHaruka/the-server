@@ -5,7 +5,7 @@ const theServer = require('the-server')
 const {Ctrl} = theServer
 const {createElement: c} = React
 
-{
+;(async () => {
   const server = theServer({
     /**
      * Redis config
@@ -44,7 +44,8 @@ const {createElement: c} = React
 
   // Register controller with name
   // Controller instance will be created for each method call
-  server.register(FruitShopCtrl, 'fruitShop')
+  server.load(FruitShopCtrl, 'fruitShop')
 
-  server.listen(3000)
-}
+  await server.listen(3000)
+
+})().catch((e) => console.error(e))

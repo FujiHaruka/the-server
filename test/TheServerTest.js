@@ -14,7 +14,8 @@ const theClient = require('the-client')
 const {TheNotAcceptableError} = require('the-error')
 const React = require('react')
 
-describe('the-server', () => {
+describe('the-server', function() {
+  this.timeout(3000)
   before(() => {
   })
 
@@ -248,7 +249,7 @@ describe('the-server', () => {
 
     class LifeCtrl extends TheServer.Ctrl {
       async listenToHeartBeat (options = {}) {
-        let {interval = 10, timeout = 1000} = options
+        const {interval = 10, timeout = 1000} = options
         const s = this
         const {session} = s
         let {count = 0} = session
@@ -291,6 +292,9 @@ describe('the-server', () => {
       })
 
       await life01.listenToHeartBeat()
+
+      ok(!life01.reloadSession)
+      ok(!life01.saveSession)
 
       await asleep(150)
       await client01.disconnect()

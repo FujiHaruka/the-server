@@ -14,12 +14,23 @@ const theClient = require('the-client')
 const {TheNotAcceptableError} = require('the-error')
 const React = require('react')
 
-describe('the-server', function() {
-  this.timeout(3000)
+describe('the-server', function () {
+  this.timeout(8000)
   before(() => {
   })
 
   after(() => {
+  })
+
+  it('Listen and Close', async function () {
+    const port = await aport()
+    const server = new TheServer({})
+
+    await server.listen(port)
+    await asleep(500)
+    await server.close().catch((err) => {
+      console.error('!!!', err)
+    })
   })
 
   it('The server', async function () {

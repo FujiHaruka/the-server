@@ -57,28 +57,25 @@ describe('the-server', function () {
 
     class FruitShopCtrl extends TheServer.Ctrl {
       async buy (name, amount) {
-        const s = this
-        const {app, client, session} = s
+        const {app, client, session} = this
         let {total = 0} = session
         session.total = total + amount
         return {name, amount, total: session.total}
       }
 
       somethingWrong () {
-        let error = new TheNotAcceptableError('Something is wrong!')
+        const error = new TheNotAcceptableError('Something is wrong!')
         throw error
       }
 
       clear () {
-        const s = this
-        s.session.total = 0
+        this.session.total = 0
       }
 
       async callSayHi () {
-        const s = this
-        let say = s.useController('say')
-        let hi = await say.sayHi()
-        s.callbacks.onHi(hi)
+        const say = this.useController('say')
+        const hi = await say.sayHi()
+        this.callbacks.onHi(hi)
         asleep(3000)
         return hi
       }
@@ -93,8 +90,8 @@ describe('the-server', function () {
       const caller = sugoCaller({port})
       const controllers = await caller.connect('rpc')
 
-      server.createCallerConnection('caller-01')
-      server.createCallerConnection('caller-02')
+      server.connectionPool.createConnection('caller-01')
+      server.connectionPool.createConnection('caller-02')
 
       const fruitShop01 = controllers.get('fruitShop').with({
         cid: 'client01',
@@ -124,7 +121,7 @@ describe('the-server', function () {
       )
 
       {
-        let caught = await fruitShop01.somethingWrong().catch((e) => e)
+        const caught = await fruitShop01.somethingWrong().catch((e) => e)
         equal(caught.name, 'NotAcceptableError')
       }
 
@@ -133,8 +130,8 @@ describe('the-server', function () {
         'hi'
       )
 
-      server.destroyCallerConnection('caller-01')
-      server.destroyCallerConnection('caller-02')
+      server.connectionPool.destroyConnection('caller-01')
+      server.connectionPool.destroyConnection('caller-02')
 
       await caller.disconnect()
     }
@@ -208,10 +205,9 @@ describe('the-server', function () {
 
     class SomeCtrl extends TheServer.Ctrl {
       doSomething (v1, v2) {
-        const s = this
-        let {count = 0} = s.session
+        let {count = 0} = this.session
         count++
-        s.session.count = count
+        this.session.count = count
         return 'Yes it is something:' + v1 + v2 + count
       }
 
@@ -244,7 +240,7 @@ describe('the-server', function () {
         `http://localhost:${port}/rpc/some/do-something-wrong/foo/bar`
       )
       equal(statusCode, 400)
-      equal(body, 'No!')
+      equal(body, '[some#doSomethingWrong] No!')
     }
 
     await server.close()
@@ -261,15 +257,14 @@ describe('the-server', function () {
     class LifeCtrl extends TheServer.Ctrl {
       async listenToHeartBeat (options = {}) {
         const {interval = 10, timeout = 1000} = options
-        const s = this
-        const {session} = s
+        const {session} = this
         let {count = 0} = session
         let startAt = new Date()
         while (new Date() - startAt < Number(timeout)) {
           count += 1
           session.count = count
-          s.emit('heartbeat:alive', {count})
-          s.callbacks.onHeartBeat(count)
+          this.emit('heartbeat:alive', {count})
+          this.callbacks.onHeartBeat(count)
           await asleep(interval)
         }
         return count + 1

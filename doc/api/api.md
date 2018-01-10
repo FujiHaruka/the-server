@@ -1,4 +1,4 @@
-# the-server@4.3.1
+# the-server@4.4.0
 
 HTTP server of the-framework
 
@@ -10,12 +10,14 @@ HTTP server of the-framework
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
+  + [server.decorateControllerModule(target, context)](#the-server-classes-the-server-decorateControllerModule)
   + [server.knownControllerNames()](#the-server-classes-the-server-knownControllerNames)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
+  + [server.decorateControllerModule(target, context)](#the-server-classes-the-server-decorateControllerModule)
   + [server.knownControllerNames()](#the-server-classes-the-server-knownControllerNames)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
 
@@ -103,6 +105,18 @@ Create an controller
 | client | Object | Client scope |
 
 
+<a class='md-heading-link' name="the-server-classes-the-server-decorateControllerModule" ></a>
+
+### server.decorateControllerModule(target, context) -> `*`
+
+Decorate controller module with server methods
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| target | Object |  |
+| context | Object |  |
+
+
 <a class='md-heading-link' name="the-server-classes-the-server-knownControllerNames" ></a>
 
 ### server.knownControllerNames() -> `Array.<string>`
@@ -168,6 +182,18 @@ Create an controller
 | controllerName | string |  |
 | app | Object | App scope |
 | client | Object | Client scope |
+
+
+<a class='md-heading-link' name="the-server-classes-the-server-decorateControllerModule" ></a>
+
+### server.decorateControllerModule(target, context) -> `*`
+
+Decorate controller module with server methods
+
+| Param | Type | Description |
+| ----- | --- | -------- |
+| target | Object |  |
+| context | Object |  |
 
 
 <a class='md-heading-link' name="the-server-classes-the-server-knownControllerNames" ></a>

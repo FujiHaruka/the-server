@@ -348,6 +348,35 @@
                     }
                 },
                 {
+                    "name": "decorateControllerModule",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Decorate controller module with server methods",
+                    "parameters": [
+                        {
+                            "name": "target",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "context",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "knownControllerNames",
                     "access": "",
                     "virtual": false,
@@ -506,6 +535,35 @@
                     "returns": {
                         "type": "Object",
                         "description": "- Controller instance"
+                    }
+                },
+                {
+                    "name": "decorateControllerModule",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Decorate controller module with server methods",
+                    "parameters": [
+                        {
+                            "name": "target",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "context",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
                     }
                 },
                 {
@@ -891,6 +949,35 @@
                     }
                 },
                 {
+                    "name": "decorateControllerModule",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Decorate controller module with server methods",
+                    "parameters": [
+                        {
+                            "name": "target",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "context",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
+                    }
+                },
+                {
                     "name": "knownControllerNames",
                     "access": "",
                     "virtual": false,
@@ -1049,6 +1136,35 @@
                     "returns": {
                         "type": "Object",
                         "description": "- Controller instance"
+                    }
+                },
+                {
+                    "name": "decorateControllerModule",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Decorate controller module with server methods",
+                    "parameters": [
+                        {
+                            "name": "target",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        },
+                        {
+                            "name": "context",
+                            "type": "Object",
+                            "description": "",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": [],
+                    "returns": {
+                        "type": "*",
+                        "description": ""
                     }
                 },
                 {

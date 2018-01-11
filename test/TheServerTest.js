@@ -240,7 +240,7 @@ describe('the-server', function () {
         `http://localhost:${port}/rpc/some/do-something-wrong/foo/bar`
       )
       equal(statusCode, 400)
-      equal(body, '[some#doSomethingWrong] No!')
+      equal(body, '`some.doSomethingWrong()` No!')
     }
 
     await server.close()

@@ -10,7 +10,7 @@ const {ok, equal, deepEqual} = require('assert')
 const arequest = require('arequest')
 const asleep = require('asleep')
 const aport = require('aport')
-const theClient = require('the-client')
+const theClient = require('the-client').default
 const {TheNotAcceptableError} = require('the-error')
 const React = require('react')
 

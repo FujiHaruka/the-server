@@ -245,7 +245,7 @@
                     "examples": []
                 },
                 {
-                    "name": "loadFromMappings",
+                    "name": "loadFromMapping",
                     "access": "",
                     "virtual": false,
                     "description": "Load all controllers",
@@ -452,7 +452,7 @@
                     "examples": []
                 },
                 {
-                    "name": "loadFromMappings",
+                    "name": "loadFromMapping",
                     "access": "",
                     "virtual": false,
                     "description": "Load all controllers",
@@ -880,7 +880,7 @@
                     "examples": []
                 },
                 {
-                    "name": "loadFromMappings",
+                    "name": "loadFromMapping",
                     "access": "",
                     "virtual": false,
                     "description": "Load all controllers",
@@ -1087,7 +1087,7 @@
                     "examples": []
                 },
                 {
-                    "name": "loadFromMappings",
+                    "name": "loadFromMapping",
                     "access": "",
                     "virtual": false,
                     "description": "Load all controllers",

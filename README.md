@@ -136,7 +136,7 @@ const {createElement: c} = React
 API Guide
 -----
 
-+ [the-server@4.6.0](./doc/api/api.md)
++ [the-server@4.6.1](./doc/api/api.md)
   + [create(args)](./doc/api/api.md#the-server-function-create)
   + [TheServer](./doc/api/api.md#the-server-class)
 

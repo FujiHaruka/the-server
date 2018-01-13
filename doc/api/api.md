@@ -1,4 +1,4 @@
-# the-server@4.6.1
+# the-server@4.7.0
 
 HTTP server of the-framework
 
@@ -7,7 +7,7 @@ HTTP server of the-framework
 + [`TheServer`](#the-server-classes) Class
   + [new TheServer(config)](#the-server-classes-the-server-constructor)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
-  + [server.loadFromMappings(ControllerMappings)](#the-server-classes-the-server-loadFromMappings)
+  + [server.loadFromMapping(ControllerMappings)](#the-server-classes-the-server-loadFromMapping)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
@@ -15,7 +15,7 @@ HTTP server of the-framework
   + [server.knownControllerNames()](#the-server-classes-the-server-knownControllerNames)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
-  + [server.loadFromMappings(ControllerMappings)](#the-server-classes-the-server-loadFromMappings)
+  + [server.loadFromMapping(ControllerMappings)](#the-server-classes-the-server-loadFromMapping)
   + [server.invokeControllerAction(cid, invocation, options)](#the-server-classes-the-server-invokeControllerAction)
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
@@ -69,9 +69,9 @@ Load a controller
 | controllerName | string | Name to instantiate with |
 
 
-<a class='md-heading-link' name="the-server-classes-the-server-loadFromMappings" ></a>
+<a class='md-heading-link' name="the-server-classes-the-server-loadFromMapping" ></a>
 
-### server.loadFromMappings(ControllerMappings)
+### server.loadFromMapping(ControllerMappings)
 
 Load all controllers
 
@@ -159,9 +159,9 @@ Load a controller
 | controllerName | string | Name to instantiate with |
 
 
-<a class='md-heading-link' name="the-server-classes-the-server-loadFromMappings" ></a>
+<a class='md-heading-link' name="the-server-classes-the-server-loadFromMapping" ></a>
 
-### server.loadFromMappings(ControllerMappings)
+### server.loadFromMapping(ControllerMappings)
 
 Load all controllers
 

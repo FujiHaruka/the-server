@@ -245,6 +245,23 @@
                     "examples": []
                 },
                 {
+                    "name": "loadFromMappings",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load all controllers",
+                    "parameters": [
+                        {
+                            "name": "ControllerMappings",
+                            "type": "Object.<string, function()>",
+                            "description": "Controller constructors",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "invokeControllerAction",
                     "access": "",
                     "virtual": false,
@@ -427,6 +444,23 @@
                             "name": "controllerName",
                             "type": "string",
                             "description": "Name to instantiate with",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "loadFromMappings",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load all controllers",
+                    "parameters": [
+                        {
+                            "name": "ControllerMappings",
+                            "type": "Object.<string, function()>",
+                            "description": "Controller constructors",
                             "default": "",
                             "optional": "",
                             "nullable": ""
@@ -846,6 +880,23 @@
                     "examples": []
                 },
                 {
+                    "name": "loadFromMappings",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load all controllers",
+                    "parameters": [
+                        {
+                            "name": "ControllerMappings",
+                            "type": "Object.<string, function()>",
+                            "description": "Controller constructors",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
                     "name": "invokeControllerAction",
                     "access": "",
                     "virtual": false,
@@ -1028,6 +1079,23 @@
                             "name": "controllerName",
                             "type": "string",
                             "description": "Name to instantiate with",
+                            "default": "",
+                            "optional": "",
+                            "nullable": ""
+                        }
+                    ],
+                    "examples": []
+                },
+                {
+                    "name": "loadFromMappings",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Load all controllers",
+                    "parameters": [
+                        {
+                            "name": "ControllerMappings",
+                            "type": "Object.<string, function()>",
+                            "description": "Controller constructors",
                             "default": "",
                             "optional": "",
                             "nullable": ""

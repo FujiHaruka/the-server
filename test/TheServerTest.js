@@ -82,7 +82,7 @@ describe('the-server', function () {
     }
 
     server.load(FruitShopCtrl, 'fruitShop')
-    server.load(SayCtrl, 'say')
+    server.loadFromMappings({say: SayCtrl})
 
     await server.listen(port)
 

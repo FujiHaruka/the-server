@@ -43,6 +43,7 @@ describe('the-server', function () {
 
     class SayCtrl extends TheServer.Ctrl {
       sayHi () {
+        console.log('!fo', this.foo)
         return 'hi'
       }
 
@@ -55,6 +56,7 @@ describe('the-server', function () {
       }
 
       controllerMethodWillInvoke (method, params) {
+        this.foo = 'Foo'
         console.log('will invoke', method, params)
       }
 

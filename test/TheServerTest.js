@@ -153,6 +153,19 @@ describe('the-server', function () {
     await server.listen(port)
 
     {
+      {
+        const {body, statusCode} = await arequest(`http://localhost:${port}/the/ping`)
+        equal(statusCode, 200)
+        equal(body, 'pong')
+      }
+      {
+        const {body, statusCode} = await arequest(`http://localhost:${port}/the/info`)
+        equal(statusCode, 200)
+        ok(body.alive)
+        ok(body.uptime)
+      }
+    }
+    {
       const times = []
       {
         const startAt = new Date()

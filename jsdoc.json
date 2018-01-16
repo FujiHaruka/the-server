@@ -394,18 +394,6 @@
                     }
                 },
                 {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
                     "name": "appScope",
                     "access": "",
                     "virtual": false,
@@ -601,18 +589,6 @@
                     }
                 },
                 {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
                     "name": "appScope",
                     "access": "",
                     "virtual": false,
@@ -631,6 +607,30 @@
                     "returns": {
                         "type": "Object",
                         "description": "Defined scope"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "type": {
+                        "names": [
+                            "Array.<string>"
+                        ]
+                    }
+                },
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "type": {
+                        "names": [
+                            "Array.<string>"
+                        ]
                     }
                 }
             ]
@@ -1029,18 +1029,6 @@
                     }
                 },
                 {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
                     "name": "appScope",
                     "access": "",
                     "virtual": false,
@@ -1236,18 +1224,6 @@
                     }
                 },
                 {
-                    "name": "knownControllerNames",
-                    "access": "",
-                    "virtual": false,
-                    "description": "Get known controller names",
-                    "parameters": [],
-                    "examples": [],
-                    "returns": {
-                        "type": "Array.<string>",
-                        "description": "Name of controllers"
-                    }
-                },
-                {
                     "name": "appScope",
                     "access": "",
                     "virtual": false,
@@ -1266,6 +1242,30 @@
                     "returns": {
                         "type": "Object",
                         "description": "Defined scope"
+                    }
+                }
+            ],
+            "properties": [
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "type": {
+                        "names": [
+                            "Array.<string>"
+                        ]
+                    }
+                },
+                {
+                    "name": "knownControllerNames",
+                    "access": "",
+                    "virtual": false,
+                    "description": "Get known controller names",
+                    "type": {
+                        "names": [
+                            "Array.<string>"
+                        ]
                     }
                 }
             ]

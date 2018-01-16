@@ -1,4 +1,4 @@
-# the-server@4.11.1
+# the-server@4.12.0
 
 HTTP server of the-framework
 
@@ -12,7 +12,6 @@ HTTP server of the-framework
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
   + [server.decorateControllerModule(target, context)](#the-server-classes-the-server-decorateControllerModule)
-  + [server.knownControllerNames()](#the-server-classes-the-server-knownControllerNames)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
   + [server.load(ControllerClass, controllerName)](#the-server-classes-the-server-load)
   + [server.loadFromMapping(ControllerMappings)](#the-server-classes-the-server-loadFromMapping)
@@ -20,7 +19,6 @@ HTTP server of the-framework
   + [server.defineControllerCreator(ControllerClass, as)](#the-server-classes-the-server-defineControllerCreator)
   + [server.createControllerFor(controllerName, app, client)](#the-server-classes-the-server-createControllerFor)
   + [server.decorateControllerModule(target, context)](#the-server-classes-the-server-decorateControllerModule)
-  + [server.knownControllerNames()](#the-server-classes-the-server-knownControllerNames)
   + [server.appScope(values)](#the-server-classes-the-server-appScope)
 
 ## Functions
@@ -130,12 +128,6 @@ Decorate controller module with server methods
 | context | Object |  |
 
 
-<a class='md-heading-link' name="the-server-classes-the-server-knownControllerNames" ></a>
-
-### server.knownControllerNames() -> `Array.<string>`
-
-Get known controller names
-
 <a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>
 
 ### server.appScope(values) -> `Object`
@@ -219,12 +211,6 @@ Decorate controller module with server methods
 | target | Object |  |
 | context | Object |  |
 
-
-<a class='md-heading-link' name="the-server-classes-the-server-knownControllerNames" ></a>
-
-### server.knownControllerNames() -> `Array.<string>`
-
-Get known controller names
 
 <a class='md-heading-link' name="the-server-classes-the-server-appScope" ></a>
 

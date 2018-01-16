@@ -146,6 +146,15 @@ describe('the-server', function () {
       await caller.disconnect()
     }
 
+    {
+      const {body, statusCode} = await arequest(`http://localhost:${port}/the/info`)
+      equal(statusCode, 200)
+      ok(body.alive)
+      ok(body.uptime)
+      deepEqual(body.controllers, ['fruitShop', 'say'])
+      console.log(body)
+    }
+
     await server.close()
   })
 
@@ -168,12 +177,7 @@ describe('the-server', function () {
         equal(statusCode, 200)
         equal(body, 'pong')
       }
-      {
-        const {body, statusCode} = await arequest(`http://localhost:${port}/the/info`)
-        equal(statusCode, 200)
-        ok(body.alive)
-        ok(body.uptime)
-      }
+
     }
     {
       const times = []

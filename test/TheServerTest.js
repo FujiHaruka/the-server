@@ -54,12 +54,12 @@ describe('the-server', function () {
         console.log('Say will detach')
       }
 
-      controllerMethodWillInvoke (invocation) {
-        console.log('will invoke', invocation)
+      controllerMethodWillInvoke (method, params) {
+        console.log('will invoke', method, params)
       }
 
-      controllerMethodDidInvoke (invocation) {
-        console.log('did invoke', invocation)
+      controllerMethodDidInvoke (method, params, result) {
+        console.log('did invoke', method, result)
       }
     }
 

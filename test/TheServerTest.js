@@ -55,7 +55,7 @@ describe('the-server', function () {
       }
 
       controllerMethodWillInvoke (invocation) {
-        // console.log('will invoke', invocation)
+        console.log('will invoke', invocation)
       }
 
       controllerMethodDidInvoke (invocation) {

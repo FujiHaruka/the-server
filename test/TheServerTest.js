@@ -53,6 +53,14 @@ describe('the-server', function () {
       controllerWillDetach () {
         console.log('Say will detach')
       }
+
+      controllerMethodWillInvoke (invocation) {
+        // console.log('will invoke', invocation)
+      }
+
+      controllerMethodDidInvoke (invocation) {
+        console.log('did invoke', invocation)
+      }
     }
 
     class FruitShopCtrl extends TheServer.Ctrl {
@@ -76,7 +84,7 @@ describe('the-server', function () {
         const say = this.useController('say')
         const hi = await say.sayHi()
         this.callbacks.onHi(hi)
-        asleep(3000)
+        asleep(300)
         return hi
       }
     }
@@ -227,6 +235,7 @@ describe('the-server', function () {
       doSomethingWrong () {
         throw new Error('No!')
       }
+
     }
 
     server.load(SomeCtrl, 'some')

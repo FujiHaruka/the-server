@@ -340,6 +340,44 @@ describe('the-server', function () {
 
     await server.close()
   })
+
+  it('Controller lifecycle', async function () {
+    let port = await aport()
+    let server = new TheServer({
+      injectors: {
+        store: () => ({isStore: true})
+      }
+    })
+
+    let wasCalledControllerDidAttatch = false
+    let wasCalledControllerWillDetach = false
+
+    class LifecycleCtrl extends TheServer.Ctrl {
+      controllerDidAttach () {
+        wasCalledControllerDidAttatch = true
+      }
+      controllerWillDetach () {
+        wasCalledControllerWillDetach = true
+      }
+    }
+
+    server.load(LifecycleCtrl, 'lifecycle')
+
+    await server.listen(port)
+
+    await asleep(10)
+    {
+      let client01 = theClient({cid: 'client01', port})
+      await client01.use('lifecycle')
+
+      await asleep(200)
+      await client01.disconnect()
+    }
+    await server.close()
+
+    ok(wasCalledControllerDidAttatch)
+    ok(wasCalledControllerWillDetach)
+  })
 })
 
 /* global describe, before, after, it */
